@@ -1,1 +1,0 @@
-# geralt-sku6_linux
