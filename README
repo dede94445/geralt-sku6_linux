@@ -1,0 +1,28 @@
+$ make O=./out CC=clang LLVM=1 LLVM_IAS=1 ARCH=arm64 LOCALVERSION=-geralt-sku6_linux -j$(nproc) geralt-sku6_defconfig
+$ make O=./out CC=clang LLVM=1 LLVM_IAS=1 ARCH=arm64 LOCALVERSION=-geralt-sku6_linux -j$(nproc)
+
+
+$ mkdepthcharge -o kern-a.img --compress lzma --cmdline "console=tty1 earlycon=tty1 fbcon=rotate:3 loglevel=7 init=/sbin/init root=/dev/sdXN rootwait rw"  --vmlinuz ./arch/arm64/boot/Image ./arch/arm64/boot/dts/mediatek/mt8188-geralt-ciri-sku6.dtb
+
+Make partition bootable (GPT code 7F00)
+# cgpt add -i $(kern-a part number) -P 15 -T 5 -S 1 /dev/sdX
+
+
+Linux kernel
+============
+
+There are several guides for kernel developers and users. These guides can
+be rendered in a number of formats, like HTML and PDF. Please read
+Documentation/admin-guide/README.rst first.
+
+In order to build the documentation, use ``make htmldocs`` or
+``make pdfdocs``.  The formatted documentation can also be read online at:
+
+    https://www.kernel.org/doc/html/latest/
+
+There are various text files in the Documentation/ subdirectory,
+several of them using the Restructured Text markup notation.
+
+Please read the Documentation/process/changes.rst file, as it contains the
+requirements for building and running the kernel, and information about
+the problems which may result by upgrading your kernel.
