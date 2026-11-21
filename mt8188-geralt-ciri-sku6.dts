@@ -2369,7 +2369,6 @@
 				spi-max-frequency = <0xbebc20>;
 				interrupt-parent = <0x2a>;
 				interrupts = <0x8f 0x08>;
-				reset-gpios = <0x2a 0x05 0x01>;
 				vdd-supply = <0xb6>;
 				vddl-supply = <0x98>;
 				firmware-name = "himax_i2chid_1002.bin";
@@ -4559,7 +4558,6 @@
 		compatible = "regulator-fixed";
 		regulator-name = "pp3300_mipi_tchscr";
 		regulator-always-on;
-		regulator-boot-on;
 		regulator-min-microvolt = <0x325aa0>;
 		regulator-max-microvolt = <0x325aa0>;
 		enable-active-high;
