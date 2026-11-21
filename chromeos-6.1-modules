@@ -1,0 +1,171 @@
+Module                  Size  Used by
+snd_seq_dummy          16384  0
+snd_seq                77824  5 snd_seq_dummy
+snd_seq_device         16384  1 snd_seq
+bridge                172032  0
+stp                    16384  1 bridge
+llc                    16384  2 bridge,stp
+tun                    57344  21
+dm_integrity           65536  1
+async_xor              16384  1 dm_integrity
+xor                    16384  1 async_xor
+xor_neon               20480  1 xor
+async_tx               16384  1 async_xor
+lz4                    16384  8
+lz4_compress           28672  1 lz4
+zstd                   16384  8
+zstd_compress         249856  1 zstd
+zram                   32768  2
+zsmalloc               28672  1 zram
+uinput                 28672  0
+mtk_apu_pwr_ipi_rx     16384  0
+mtk_vcodec_dec_hw_mt8188    16384  0
+xt_nat                 16384  10
+mtk_apu_mdw            73728  0
+mtk_vcodec_dec_mt8188   118784  1 mtk_vcodec_dec_hw_mt8188
+mtk_jpeg               32768  0
+mtk_apusys             32768  0
+v4l2_h264              16384  1 mtk_vcodec_dec_mt8188
+mtk_vcodec_enc         40960  0
+v4l2_vp9               32768  1 mtk_vcodec_dec_mt8188
+mtk_jpeg_enc_hw        16384  1 mtk_jpeg
+mtk_jpeg_dec_hw        20480  1 mtk_jpeg
+mtk_apu_hw_logger      20480  1 mtk_apusys
+mtk_vcodec_dbgfs       16384  2 mtk_vcodec_enc,mtk_vcodec_dec_mt8188
+mtk_apu_mailbox        16384  3 mtk_apu_hw_logger,mtk_apusys
+mtk_vcodec_common      20480  4 mtk_vcodec_enc,mtk_vcodec_dbgfs,mtk_vcodec_dec_mt8188,mtk_vcodec_dec_hw_mt8188
+8021q                  32768  0
+mtk_aie               684032  2
+v4l2_mem2mem           28672  6 mtk_jpeg,mtk_vcodec_enc,mtk_aie,mtk_jpeg_dec_hw,mtk_jpeg_enc_hw,mtk_vcodec_dec_mt8188
+btusb                  65536  0
+btmtk                  16384  1 btusb
+btintel                45056  1 btusb
+btbcm                  20480  1 btusb
+btrtl                  28672  1 btusb
+dw9768                 16384  0
+ip6table_nat           16384  1
+xt_MASQUERADE          16384  2
+iptable_nat            16384  1
+nf_nat                 40960  4 ip6table_nat,xt_nat,iptable_nat,xt_MASQUERADE
+xt_cgroup              16384  2
+xt_connmark            16384  16
+snd_sof_mt8186         24576  2
+snd_sof_xtensa_dsp     16384  1 snd_sof_mt8186
+mtk_adsp_common        16384  1 snd_sof_mt8186
+nf_conntrack_netlink    45056  0
+snd_sof_of             16384  1 snd_sof_mt8186
+snd_sof               143360  3 snd_sof_mt8186,mtk_adsp_common,snd_sof_of
+snd_sof_utils          16384  1 snd_sof
+xt_CT                  16384  3
+fuse                  143360  8
+ip6t_REJECT            16384  2
+nfnetlink_cthelper     20480  3
+iio_trig_sysfs         16384  0
+mt7921e                32768  0
+mt7921_common         106496  1 mt7921e
+cros_ec_sensors        16384  0
+cros_ec_sensors_core    20480  2 cros_ec_sensors
+mt76_connac_lib        53248  2 mt7921e,mt7921_common
+industrialio_triggered_buffer    16384  1 cros_ec_sensors_core
+kfifo_buf              16384  2 industrialio_triggered_buffer,cros_ec_sensors_core
+mt76                   90112  3 mt7921e,mt7921_common,mt76_connac_lib
+bluetooth             679936  8 btrtl,btmtk,btintel,btbcm,btusb
+xt_state               16384  0
+mac80211              860160  3 mt76,mt7921_common,mt76_connac_lib
+ecdh_generic           16384  1 bluetooth
+xt_conntrack           16384  11
+cfg80211              778240  4 mt76,mac80211,mt7921_common,mt76_connac_lib
+ecc                    49152  1 ecdh_generic
+nf_conntrack          110592  9 xt_conntrack,nf_nat,nfnetlink_cthelper,xt_state,xt_nat,nf_conntrack_netlink,xt_connmark,xt_CT,xt_MASQUERADE
+cros_ec_sensorhub      28672  1 cros_ec_sensors_core
+hid_google_hammer      20480  0
+hid_vivaldi_common     16384  1 hid_google_hammer
+joydev                 36864  0
+(trixie)utente@localhost:~$ lsmod | grep hammer
+hid_google_hammer      20480  0
+hid_vivaldi_common     16384  1 hid_google_hammer
+(trixie)utente@localhost:~$ https://raw.githubusercontent.com/dede94445/geralt-sku6_linux/refs/heads/linux-6.18.64/arch/arm64/configs/geralt-sku6_defconfigc^C
+(trixie)utente@localhost:~$ lsmod
+Module                  Size  Used by
+snd_seq_dummy          16384  0
+snd_seq                77824  5 snd_seq_dummy
+snd_seq_device         16384  1 snd_seq
+bridge                172032  0
+stp                    16384  1 bridge
+llc                    16384  2 bridge,stp
+tun                    57344  21
+dm_integrity           65536  1
+async_xor              16384  1 dm_integrity
+xor                    16384  1 async_xor
+xor_neon               20480  1 xor
+async_tx               16384  1 async_xor
+lz4                    16384  8
+lz4_compress           28672  1 lz4
+zstd                   16384  8
+zstd_compress         249856  1 zstd
+zram                   32768  2
+zsmalloc               28672  1 zram
+uinput                 28672  0
+mtk_apu_pwr_ipi_rx     16384  0
+mtk_vcodec_dec_hw_mt8188    16384  0
+xt_nat                 16384  10
+mtk_apu_mdw            73728  0
+mtk_vcodec_dec_mt8188   118784  1 mtk_vcodec_dec_hw_mt8188
+mtk_jpeg               32768  0
+mtk_apusys             32768  0
+v4l2_h264              16384  1 mtk_vcodec_dec_mt8188
+mtk_vcodec_enc         40960  0
+v4l2_vp9               32768  1 mtk_vcodec_dec_mt8188
+mtk_jpeg_enc_hw        16384  1 mtk_jpeg
+mtk_jpeg_dec_hw        20480  1 mtk_jpeg
+mtk_apu_hw_logger      20480  1 mtk_apusys
+mtk_vcodec_dbgfs       16384  2 mtk_vcodec_enc,mtk_vcodec_dec_mt8188
+mtk_apu_mailbox        16384  3 mtk_apu_hw_logger,mtk_apusys
+mtk_vcodec_common      20480  4 mtk_vcodec_enc,mtk_vcodec_dbgfs,mtk_vcodec_dec_mt8188,mtk_vcodec_dec_hw_mt8188
+8021q                  32768  0
+mtk_aie               684032  2
+v4l2_mem2mem           28672  6 mtk_jpeg,mtk_vcodec_enc,mtk_aie,mtk_jpeg_dec_hw,mtk_jpeg_enc_hw,mtk_vcodec_dec_mt8188
+btusb                  65536  0
+btmtk                  16384  1 btusb
+btintel                45056  1 btusb
+btbcm                  20480  1 btusb
+btrtl                  28672  1 btusb
+dw9768                 16384  0
+ip6table_nat           16384  1
+xt_MASQUERADE          16384  2
+iptable_nat            16384  1
+nf_nat                 40960  4 ip6table_nat,xt_nat,iptable_nat,xt_MASQUERADE
+xt_cgroup              16384  2
+xt_connmark            16384  16
+snd_sof_mt8186         24576  2
+snd_sof_xtensa_dsp     16384  1 snd_sof_mt8186
+mtk_adsp_common        16384  1 snd_sof_mt8186
+nf_conntrack_netlink    45056  0
+snd_sof_of             16384  1 snd_sof_mt8186
+snd_sof               143360  3 snd_sof_mt8186,mtk_adsp_common,snd_sof_of
+snd_sof_utils          16384  1 snd_sof
+xt_CT                  16384  3
+fuse                  143360  8
+ip6t_REJECT            16384  2
+nfnetlink_cthelper     20480  3
+iio_trig_sysfs         16384  0
+mt7921e                32768  0
+mt7921_common         106496  1 mt7921e
+cros_ec_sensors        16384  0
+cros_ec_sensors_core    20480  3 cros_ec_sensors
+mt76_connac_lib        53248  2 mt7921e,mt7921_common
+industrialio_triggered_buffer    16384  1 cros_ec_sensors_core
+kfifo_buf              16384  2 industrialio_triggered_buffer,cros_ec_sensors_core
+mt76                   90112  3 mt7921e,mt7921_common,mt76_connac_lib
+bluetooth             679936  8 btrtl,btmtk,btintel,btbcm,btusb
+xt_state               16384  0
+mac80211              860160  3 mt76,mt7921_common,mt76_connac_lib
+ecdh_generic           16384  1 bluetooth
+xt_conntrack           16384  11
+cfg80211              778240  4 mt76,mac80211,mt7921_common,mt76_connac_lib
+ecc                    49152  1 ecdh_generic
+nf_conntrack          110592  9 xt_conntrack,nf_nat,nfnetlink_cthelper,xt_state,xt_nat,nf_conntrack_netlink,xt_connmark,xt_CT,xt_MASQUERADE
+cros_ec_sensorhub      28672  1 cros_ec_sensors_core
+hid_google_hammer      20480  0
+hid_vivaldi_common     16384  1 hid_google_hammer
+joydev                 36864  0
