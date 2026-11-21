@@ -511,12 +511,24 @@
 		audio-routing = "ETDM1_OUT", "ETDM_SPK_PIN", "ETDM2_OUT", "ETDM_HP_PIN", "ETDM1_IN", "ETDM_SPK_PIN", "ETDM2_IN", "ETDM_HP_PIN", "ADDA Capture", "MTKAIF_PIN", "Headphone Jack", "HPOL", "Headphone Jack", "HPOR", "MIC1", "Headset Mic";
 
 		dai-link-0 {
-			link-name = "ETDM1_IN_BE";
-			dai-format = "i2s";
+			link-name = "ETDM2_OUT_BE";
 			mediatek,clk-provider = "cpu";
+
+			codec {
+				sound-dai = <0x1d>;
+			};
 		};
 
 		dai-link-1 {
+			link-name = "ETDM2_IN_BE";
+			mediatek,clk-provider = "cpu";
+
+			codec {
+				sound-dai = <0x1d>;
+			};
+		};
+
+		dai-link-2 {
 			link-name = "ETDM1_OUT_BE";
 			dai-format = "i2s";
 			mediatek,clk-provider = "cpu";
@@ -526,22 +538,10 @@
 			};
 		};
 
-		dai-link-2 {
-			link-name = "ETDM2_IN_BE";
-			mediatek,clk-provider = "cpu";
-
-			codec {
-				sound-dai = <0x1d>;
-			};
-		};
-
 		dai-link-3 {
-			link-name = "ETDM2_OUT_BE";
+			link-name = "ETDM1_IN_BE";
+			dai-format = "i2s";
 			mediatek,clk-provider = "cpu";
-
-			codec {
-				sound-dai = <0x1d>;
-			};
 		};
 
 		dai-link-4 {
@@ -1441,6 +1441,20 @@
 					pinmux = <0x6f00>;
 				};
 			};
+			wifi-pmu-en-hog {
+				gpio-hog;
+				gpios = <0x93 0x00>;
+				output-high;
+				line-name = "MT7921_PMU_EN_1V8";
+			};
+
+			wifi-kill-hog {
+				gpio-hog;
+				gpios = <0x0d 0x00>;
+				output-high;
+				line-name = "WIFI_KILL_1V8_L";
+			};
+
 		};
 
 		syscon@10006000 {
@@ -2360,6 +2374,20 @@
 			pinctrl-names = "default", "sleep";
 			pinctrl-0 = <0x52>;
 			pinctrl-1 = <0x53>;
+			num-cs = <0x01>;
+
+			touchscreen@0 {
+				compatible = "himax,hx83102j";
+				reg = <0x00>;
+				spi-max-frequency = <0xbebc20>;
+				interrupt-parent = <0x2a>;
+				interrupts = <0x8f 0x08>;
+				reset-gpios = <0x2a 0x05 0x01>;
+				vdd-supply = <0xb6>;
+				vddl-supply = <0x98>;
+				firmware-name = "himax_i2chid_1002.bin";
+			};
+
 		};
 
 		spi@11012000 {
