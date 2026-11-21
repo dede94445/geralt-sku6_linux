@@ -90,8 +90,8 @@
 		regulator-max-microvolt = <1800000>;
 		gpio = <&pio 147 GPIO_ACTIVE_HIGH>;
 		enable-active-high;
-		startup-delay-us = <10000>;
-		vin-supply = <&mt6359_vcn18_ldo_reg>;
+		startup-delay-us = <15000>;
+		vin-supply = <&wifi_kill_en>;
 	};
 };
 
