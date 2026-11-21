@@ -104,13 +104,13 @@ dtb-$(CONFIG_ARCH_MEDIATEK) += mt8188-geralt-ciri-sku6.dtb
 #dtb-$(CONFIG_ARCH_MEDIATEK) += mt8395-kontron-3-5-sbc-i1200.dtb
 #dtb-$(CONFIG_ARCH_MEDIATEK) += mt8395-radxa-nio-12l.dtb
 #dtb-$(CONFIG_ARCH_MEDIATEK) += mt8395-radxa-nio-12l-8-hd-panel.dtbo
-mt8395-radxa-nio-12l-8-hd-panel-dtbs := mt8395-radxa-nio-12l.dtb mt8395-radxa-nio-12l-8-hd-panel.dtbo
+#mt8395-radxa-nio-12l-8-hd-panel-dtbs := mt8395-radxa-nio-12l.dtb mt8395-radxa-nio-12l-8-hd-panel.dtbo
 #dtb-$(CONFIG_ARCH_MEDIATEK) += mt8395-radxa-nio-12l-8-hd-panel.dtb
 #dtb-$(CONFIG_ARCH_MEDIATEK) += mt8516-pumpkin.dtb
 
 # Device tree overlays support
-DTC_FLAGS_mt7986a-bananapi-bpi-r3 := -@
-DTC_FLAGS_mt7986a-bananapi-bpi-r3-mini := -@
-DTC_FLAGS_mt7988a-bananapi-bpi-r4 := -@
-DTC_FLAGS_mt7988a-bananapi-bpi-r4-2g5 := -@
-DTC_FLAGS_mt8395-radxa-nio-12l := -@
+#DTC_FLAGS_mt7986a-bananapi-bpi-r3 := -@
+#DTC_FLAGS_mt7986a-bananapi-bpi-r3-mini := -@
+#DTC_FLAGS_mt7988a-bananapi-bpi-r4 := -@
+#DTC_FLAGS_mt7988a-bananapi-bpi-r4-2g5 := -@
+#DTC_FLAGS_mt8395-radxa-nio-12l := -@
