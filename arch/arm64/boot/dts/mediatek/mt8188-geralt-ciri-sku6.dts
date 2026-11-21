@@ -72,6 +72,17 @@
 };
 
 / {
+
+	wifi_kill_en: regulator-wifi-kill-en {
+		compatible = "regulator-fixed";
+		regulator-name = "wifi_kill_en";
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <1800000>;
+		gpio = <&pio 13 GPIO_ACTIVE_HIGH>;
+		enable-active-high;
+		vin-supply = <&mt6359_vcn18_ldo_reg>;
+	};
+
 	mt7921_pmu_en: regulator-mt7921-pmu-en {
 		compatible = "regulator-fixed";
 		regulator-name = "mt7921_pmu_en";
