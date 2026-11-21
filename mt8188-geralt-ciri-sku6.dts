@@ -2752,6 +2752,7 @@
 			power-domains = <0x44 0x05>;
 			resets = <0x45 0x13>;
 			reset-names = "mac";
+			vpcie3v3-supply = <0xb5>;
 			status = "okay";
 			pinctrl-names = "default";
 			pinctrl-0 = <0x6c>;
@@ -4536,6 +4537,20 @@
 		pinctrl-0 = <0xb1>;
 		pinctrl-names = "default";
 		vin-supply = <0x68>;
+		phandle = <0xb5>;
+	};
+
+	regulator-pp3300-mipi-tchscr {
+		compatible = "regulator-fixed";
+		regulator-name = "pp3300_mipi_tchscr";
+		regulator-always-on;
+		regulator-boot-on;
+		regulator-min-microvolt = <0x325aa0>;
+		regulator-max-microvolt = <0x325aa0>;
+		enable-active-high;
+		gpio = <0x2a 0x90 0x00>;
+		vin-supply = <0x68>;
+		phandle = <0xb6>;
 	};
 
 	regulator-pp4200-s5 {
