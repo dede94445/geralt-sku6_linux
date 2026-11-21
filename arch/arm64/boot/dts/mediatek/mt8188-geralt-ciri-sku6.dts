@@ -102,5 +102,4 @@
 &pcie {
 	vpcie3v3-supply = <&pp3300_wlan>;
 	vpcie1v8-supply = <&mt7921_pmu_en>;
-	reset-gpios = <&pio 48 GPIO_ACTIVE_LOW>;
 };
