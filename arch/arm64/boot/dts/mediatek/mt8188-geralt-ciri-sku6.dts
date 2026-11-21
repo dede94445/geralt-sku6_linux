@@ -70,3 +70,21 @@
 		};
 	};
 };
+
+/ {
+	mt7921_pmu_en: regulator-mt7921-pmu-en {
+		compatible = "regulator-fixed";
+		regulator-name = "mt7921_pmu_en";
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <1800000>;
+		gpio = <&pio 147 GPIO_ACTIVE_HIGH>;
+		enable-active-high;
+		startup-delay-us = <10000>;
+		vin-supply = <&mt6359_vcn18_ldo_reg>;
+	};
+};
+
+&pcie {
+	vpcie3v3-supply = <&pp3300_wlan>;
+	vpcie1v8-supply = <&mt7921_pmu_en>;
+};
