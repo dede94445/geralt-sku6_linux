@@ -78,6 +78,8 @@
 		regulator-name = "wifi_kill_en";
 		regulator-min-microvolt = <1800000>;
 		regulator-max-microvolt = <1800000>;
+		regulator-boot-on;
+		regulator-always-on;
 		gpio = <&pio 13 GPIO_ACTIVE_HIGH>;
 		enable-active-high;
 		vin-supply = <&mt6359_vcn18_ldo_reg>;
@@ -88,6 +90,8 @@
 		regulator-name = "mt7921_pmu_en";
 		regulator-min-microvolt = <1800000>;
 		regulator-max-microvolt = <1800000>;
+		regulator-boot-on;
+		regulator-always-on;
 		gpio = <&pio 147 GPIO_ACTIVE_HIGH>;
 		enable-active-high;
 		startup-delay-us = <15000>;
@@ -98,4 +102,5 @@
 &pcie {
 	vpcie3v3-supply = <&pp3300_wlan>;
 	vpcie1v8-supply = <&mt7921_pmu_en>;
+	reset-gpios = <&pio 48 GPIO_ACTIVE_LOW>;
 };
