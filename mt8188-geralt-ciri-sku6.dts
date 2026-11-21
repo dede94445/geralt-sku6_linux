@@ -1441,19 +1441,6 @@
 					pinmux = <0x6f00>;
 				};
 			};
-			wifi-pmu-en-hog {
-				gpio-hog;
-				gpios = <0x93 0x00>;
-				output-high;
-				line-name = "MT7921_PMU_EN_1V8";
-			};
-
-			wifi-kill-hog {
-				gpio-hog;
-				gpios = <0x0d 0x00>;
-				output-high;
-				line-name = "WIFI_KILL_1V8_L";
-			};
 
 		};
 
