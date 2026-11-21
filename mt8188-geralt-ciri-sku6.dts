@@ -1896,6 +1896,7 @@
 						regulator-min-microvolt = <0x1b7740>;
 						regulator-max-microvolt = <0x1b7740>;
 						regulator-enable-ramp-delay = <0xf0>;
+						phandle = <0xb7>;	
 					};
 
 					ldo_vfe28 {
@@ -2372,6 +2373,7 @@
 				vdd-supply = <0xb6>;
 				vddl-supply = <0x98>;
 				firmware-name = "himax_i2chid_1002.bin";
+				status = "disabled";
 			};
 
 		};
@@ -2767,6 +2769,7 @@
 			resets = <0x45 0x13>;
 			reset-names = "mac";
 			vpcie3v3-supply = <0xb5>;
+			vpcie1v8-supply = <0xb7>;
 			status = "okay";
 			pinctrl-names = "default";
 			pinctrl-0 = <0x6c>;
@@ -4557,7 +4560,6 @@
 	regulator-pp3300-mipi-tchscr {
 		compatible = "regulator-fixed";
 		regulator-name = "pp3300_mipi_tchscr";
-		regulator-always-on;
 		regulator-min-microvolt = <0x325aa0>;
 		regulator-max-microvolt = <0x325aa0>;
 		enable-active-high;
