@@ -28,6 +28,9 @@ properties:
               - rockchip,rk3568-mali
           - const: arm,mali-bifrost # Mali Bifrost GPU model/revision is fully discoverable
       - items:
+          - const: mediatek,mt8188-mali
+          - const: arm,mali-valhall
+      - items:
           - enum:
               - mediatek,mt8195-mali
           - const: mediatek,mt8192-mali
@@ -223,6 +226,24 @@ allOf:
           items:
             - const: core0
             - const: core1
+      required:
+        - power-domains
+        - power-domain-names
+  - if:
+      properties:
+        compatible:
+          contains:
+            const: mediatek,mt8188-mali
+    then:
+      properties:
+        power-domains:
+          minItems: 3
+          maxItems: 3
+        power-domain-names:
+          items:
+            - const: core0
+            - const: core1
+            - const: core2
       required:
         - power-domains
         - power-domain-names
