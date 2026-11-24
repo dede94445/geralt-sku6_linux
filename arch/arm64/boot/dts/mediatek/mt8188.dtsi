@@ -2234,7 +2234,7 @@
 			interrupts = <GIC_SPI 383 IRQ_TYPE_LEVEL_HIGH 0>,
 				     <GIC_SPI 382 IRQ_TYPE_LEVEL_HIGH 0>,
 				     <GIC_SPI 381 IRQ_TYPE_LEVEL_HIGH 0>;
-			interrupt-names = "JOB", "MMU", "GPU";
+			interrupt-names = "job", "mmu", "gpu";
 			nvmem-cells = <&efuse_gpu_volt_bin>;
 			nvmem-cell-names = "volt-bin";
 			operating-points-v2 = <&gpu_opp_table>;
