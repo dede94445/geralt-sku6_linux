@@ -44,31 +44,14 @@ diff --git a/drivers/gpu/drm/panfrost/panfrost_device.h b/drivers/gpu/drm/panfro
 diff --git a/drivers/gpu/drm/panfrost/panfrost_drv.c b/drivers/gpu/drm/panfrost/panfrost_drv.c
 --- a/drivers/gpu/drm/panfrost/panfrost_drv.c
 +++ b/drivers/gpu/drm/panfrost/panfrost_drv.c
-@@ -684,6 +684,16 @@
- 	.pm_domain_names = mediatek_mt8186_pm_domains,
+@@ -691,6 +691,7 @@
+ 	.supply_names = mediatek_mt8188_supplies,
+ 	.num_pm_domains = ARRAY_SIZE(mediatek_mt8188_pm_domains),
+ 	.pm_domain_names = mediatek_mt8188_pm_domains,
++	.gpu_quirks = BIT(GPU_QUIRK_FORCE_AARCH64_PGTABLE),
  };
  
-+static const char * const mediatek_mt8188_supplies[] = { "mali", NULL };
-+static const char * const mediatek_mt8188_pm_domains[] = { "core0", "core1", "core2" };
-+static const struct panfrost_compatible mediatek_mt8188_data = {
-+	.num_supplies = ARRAY_SIZE(mediatek_mt8188_supplies) - 1,
-+	.supply_names = mediatek_mt8188_supplies,
-+	.num_pm_domains = ARRAY_SIZE(mediatek_mt8188_pm_domains),
-+	.pm_domain_names = mediatek_mt8188_pm_domains,
-+	.gpu_quirks = BIT(GPU_QUIRK_FORCE_AARCH64_PGTABLE),
-+};
-+
  static const char * const mediatek_mt8192_supplies[] = { "mali", NULL };
- static const char * const mediatek_mt8192_pm_domains[] = { "core0", "core1", "core2",
- 							   "core3", "core4" };
-@@ -714,6 +724,7 @@
- 	{ .compatible = "mediatek,mt8183-mali", .data = &mediatek_mt8183_data },
- 	{ .compatible = "mediatek,mt8183b-mali", .data = &mediatek_mt8183_b_data },
- 	{ .compatible = "mediatek,mt8186-mali", .data = &mediatek_mt8186_data },
-+	{ .compatible = "mediatek,mt8188-mali", .data = &mediatek_mt8188_data },
- 	{ .compatible = "mediatek,mt8192-mali", .data = &mediatek_mt8192_data },
- 	{}
- };
 diff --git a/drivers/gpu/drm/panfrost/panfrost_regs.h b/drivers/gpu/drm/panfrost/panfrost_regs.h
 --- a/drivers/gpu/drm/panfrost/panfrost_regs.h
 +++ b/drivers/gpu/drm/panfrost/panfrost_regs.h
