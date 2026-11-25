@@ -1,0 +1,32 @@
+From: ChatGPT
+Subject: [PATCH] ucm: ciri sku6: allow speaker profile initialization
+
+The Ciri SKU6 UCM profile currently aborts HiFi verb initialization because
+the kernel does not expose the two Waves CODEC_ADAPTER controls referenced
+by the profile. Comment out those optional TLV writes so the remaining
+initialization and the Speaker device EnableSequence can run.
+
+Add the required UCM syntax declaration to the card configuration file.
+
+The Speaker EnableSequence already contains the O072/I070 and O073/I071
+routing switches; leave those commands unchanged.
+
+---
+diff --git a/sof-mt8188_tas2563_8326.ciri.conf b/sof-mt8188_tas2563_8326.ciri.conf
+--- a/sof-mt8188_tas2563_8326.ciri.conf
++++ b/sof-mt8188_tas2563_8326.ciri.conf
+@@ -1,3 +1,4 @@
++Syntax 4
+ Comment "Ciri internal card"
+
+ SectionUseCase."HiFi" {
+diff --git a/HiFi.conf b/HiFi.conf
+--- a/HiFi.conf
++++ b/HiFi.conf
+@@ -1,0 +1,0 @@
+@@
+-    cset-tlv "name='CODEC_ADAPTER1.0 Waves Speakers Setup 1' /opt/waves/ciri.es8326/waves_params_tas2563_speaker.bin"
+-    cset-tlv "name='CODEC_ADAPTER2.0 Waves Headphones Setup 2' /opt/waves/ciri.es8326/waves_params_headphone.bin"
++    # Temporarily disabled: these controls are not exposed by the current kernel driver.
++    # cset-tlv "name='CODEC_ADAPTER1.0 Waves Speakers Setup 1' /opt/waves/ciri.es8326/waves_params_tas2563_speaker.bin"
++    # cset-tlv "name='CODEC_ADAPTER2.0 Waves Headphones Setup 2' /opt/waves/ciri.es8326/waves_params_headphone.bin"
