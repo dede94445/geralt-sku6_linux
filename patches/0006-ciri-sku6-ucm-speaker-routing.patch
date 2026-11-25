@@ -11,20 +11,22 @@ Add the required UCM syntax declaration to the card configuration file.
 The Speaker EnableSequence already contains the O072/I070 and O073/I071
 routing switches; leave those commands unchanged.
 
+Apply from /usr/share/alsa/ucm2 with:
+  patch -p1 < 0006-ciri-sku6-ucm-speaker-routing.patch
+
 ---
-diff --git a/sof-mt8188_tas2563_8326.ciri.conf b/sof-mt8188_tas2563_8326.ciri.conf
---- a/sof-mt8188_tas2563_8326.ciri.conf
-+++ b/sof-mt8188_tas2563_8326.ciri.conf
+diff --git a/sof-mt8188_tas2563_8326.ciri/sof-mt8188_tas2563_8326.ciri.conf b/sof-mt8188_tas2563_8326.ciri/sof-mt8188_tas2563_8326.ciri.conf
+--- a/sof-mt8188_tas2563_8326.ciri/sof-mt8188_tas2563_8326.ciri.conf
++++ b/sof-mt8188_tas2563_8326.ciri/sof-mt8188_tas2563_8326.ciri.conf
 @@ -1,3 +1,4 @@
 +Syntax 4
  Comment "Ciri internal card"
 
  SectionUseCase."HiFi" {
-diff --git a/HiFi.conf b/HiFi.conf
---- a/HiFi.conf
-+++ b/HiFi.conf
-@@ -1,0 +1,0 @@
-@@
+diff --git a/sof-mt8188_tas2563_8326.ciri/HiFi.conf b/sof-mt8188_tas2563_8326.ciri/HiFi.conf
+--- a/sof-mt8188_tas2563_8326.ciri/HiFi.conf
++++ b/sof-mt8188_tas2563_8326.ciri/HiFi.conf
+@@ -1,2 +1,4 @@
 -    cset-tlv "name='CODEC_ADAPTER1.0 Waves Speakers Setup 1' /opt/waves/ciri.es8326/waves_params_tas2563_speaker.bin"
 -    cset-tlv "name='CODEC_ADAPTER2.0 Waves Headphones Setup 2' /opt/waves/ciri.es8326/waves_params_headphone.bin"
 +    # Temporarily disabled: these controls are not exposed by the current kernel driver.
