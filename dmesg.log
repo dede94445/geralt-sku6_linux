@@ -1,0 +1,1463 @@
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x412fd050]
+[    0.000000] Linux version 6.1.180-geralt-sku6_linux-gf5ac45983a68-dirty (ubuntu@debian01) (Ubuntu clang version 21.1.8 (6ubuntu1), Ubuntu LLD 21.1.8) #4 SMP PREEMPT Fri Nov 27 21:38:04 CET 2026
+[    0.000000] random: crng init done
+[    0.000000] Machine model: Google Ciri sku6(rev4) board
+[    0.000000] Reserved memory: created DMA memory pool at 0x0000000050000000, size 9 MiB
+[    0.000000] OF: reserved mem: initialized node scp-mem-region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created DMA memory pool at 0x0000000055000000, size 20 MiB
+[    0.000000] OF: reserved mem: initialized node apu-reserve-memory, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created DMA memory pool at 0x0000000060f00000, size 1 MiB
+[    0.000000] OF: reserved mem: initialized node snd-dma-mem-region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created DMA memory pool at 0x0000000061000000, size 1 MiB
+[    0.000000] OF: reserved mem: initialized node adsp-dma-mem-region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created DMA memory pool at 0x0000000070000000, size 160 MiB
+[    0.000000] OF: reserved mem: initialized node scp-dual-mem-region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x000000007a000000, size 80 MiB
+[    0.000000] OF: reserved mem: initialized node scp-isp-cma-region, compatible id shared-dma-pool
+[    0.000000] OF: reserved mem: initialized node secure-region, compatible id mediatek,dynamic-restricted-region
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000040000000-0x00000000ffffffff]
+[    0.000000]   DMA32    empty
+[    0.000000]   Normal   [mem 0x0000000100000000-0x000000023fffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000040000000-0x000000004fffffff]
+[    0.000000]   node   0: [mem 0x0000000050000000-0x00000000508fffff]
+[    0.000000]   node   0: [mem 0x0000000050900000-0x00000000545fffff]
+[    0.000000]   node   0: [mem 0x0000000054700000-0x000000005fffffff]
+[    0.000000]   node   0: [mem 0x0000000060000000-0x00000000610fffff]
+[    0.000000]   node   0: [mem 0x0000000061100000-0x000000006fffffff]
+[    0.000000]   node   0: [mem 0x0000000070000000-0x0000000079ffffff]
+[    0.000000]   node   0: [mem 0x000000007a000000-0x000000007effffff]
+[    0.000000]   node   0: [mem 0x000000007f000000-0x000000007f3fffff]
+[    0.000000]   node   0: [mem 0x000000007f400000-0x00000000ffdfffff]
+[    0.000000]   node   0: [mem 0x0000000100000000-0x000000023fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000040000000-0x000000023fffffff]
+[    0.000000] On node 0, zone DMA: 256 pages in unavailable ranges
+[    0.000000] On node 0, zone Normal: 512 pages in unavailable ranges
+[    0.000000] cma: Reserved 16 MiB at 0x00000000fec00000
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.4
+[    0.000000] percpu: Embedded 30 pages/cpu s84520 r8192 d30168 u122880
+[    0.000000] pcpu-alloc: s84520 r8192 d30168 u122880 alloc=30*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: detected: GIC system register CPU interface
+[    0.000000] CPU features: detected: Virtualization Host Extensions
+[    0.000000] CPU features: kernel page table isolation forced ON by KASLR
+[    0.000000] CPU features: detected: Kernel page table isolation (KPTI)
+[    0.000000] CPU features: detected: Broken broadcast TLBI completion
+[    0.000000] CPU features: detected: ARM errata 1165522, 1319367, or 1530923
+[    0.000000] alternatives: applying boot alternatives
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 2063616
+[    0.000000] Kernel command line: cros_secure kern_guid=ecb2a33b-c1d4-4509-9ba4-b765377ad7d2 console=tty1 earlycon=tty1 earlyprintk=tty1 fbcon=rotate:3 loglevel=7 init=/sbin/init root=/dev/sda2 rootwait rw
+[    0.000000] Unknown kernel command line parameters "kern_guid=ecb2a33b-c1d4-4509-9ba4-b765377ad7d2 earlyprintk=tty1", will be passed to user space.
+[    0.000000] Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    0.000000] mem auto-init: stack:all(zero), heap alloc:on, heap free:off
+[    0.000000] software IO TLB: area num 8.
+[    0.000000] software IO TLB: mapped [mem 0x00000000fac00000-0x00000000fec00000] (64MB)
+[    0.000000] Memory: 7803372K/8385536K available (18496K kernel code, 3168K rwdata, 14492K rodata, 1664K init, 1534K bss, 483860K reserved, 98304K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] ftrace: allocating 55613 entries in 218 pages
+[    0.000000] ftrace: allocated 218 pages with 5 groups
+[    0.000000] trace event string verifier disabled
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] 	Trampoline variant of Tasks RCU enabled.
+[    0.000000] 	Rude variant of Tasks RCU enabled.
+[    0.000000] 	Tracing variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: GIC: Using split EOI/Deactivate mode
+[    0.000000] GICv3: 864 SPIs implemented
+[    0.000000] GICv3: 0 Extended SPIs implemented
+[    0.000000] Root IRQ handler: gic_handle_irq
+[    0.000000] GICv3: GICv3 features: 16 PPIs
+[    0.000000] GICv3: CPU0: found redistributor 0 region 0:0x000000000c040000
+[    0.000000] GICv3: GIC: PPI partition interrupt-partition-0[0] { /cpus/cpu@0[0] /cpus/cpu@100[1] /cpus/cpu@200[2] /cpus/cpu@300[3] /cpus/cpu@400[4] /cpus/cpu@500[5] }
+[    0.000000] GICv3: GIC: PPI partition interrupt-partition-1[1] { /cpus/cpu@600[6] /cpus/cpu@700[7] }
+[    0.000000] rcu: 	Offload RCU callbacks from CPUs: 0-7.
+[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.000000] arch_timer: cp15 timer(s) running at 13.00MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x2ff89eacb, max_idle_ns: 440795202429 ns
+[    0.000000] sched_clock: 56 bits at 13MHz, resolution 76ns, wraps every 4398046511101ns
+[    0.000628] kfence: initialized - using 2097152 bytes for 255 objects at 0x(____ptrval____)-0x(____ptrval____)
+[    0.000736] Console: colour dummy device 80x25
+[    0.001162] printk: console [tty1] enabled
+[    0.001192] Calibrating delay loop (skipped), value calculated using timer frequency.. 26.00 BogoMIPS (lpj=13000)
+[    0.001205] pid_max: default: 32768 minimum: 301
+[    0.001270] LSM: Security Framework initializing
+[    0.001308] landlock: Up and running.
+[    0.001314] Yama: becoming mindful.
+[    0.001331] SELinux:  Initializing.
+[    0.001386] LSM support for eBPF active
+[    0.001461] Mount-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.001498] Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.002749] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.002761] cblist_init_generic: Setting shift to 3 and lim to 1.
+[    0.002814] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.002824] cblist_init_generic: Setting shift to 3 and lim to 1.
+[    0.002875] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.002884] cblist_init_generic: Setting shift to 3 and lim to 1.
+[    0.003013] rcu: Hierarchical SRCU implementation.
+[    0.003022] rcu: 	Max phase no-delay instances is 400.
+[    0.003687] smp: Bringing up secondary CPUs ...
+[    0.004140] Detected VIPT I-cache on CPU1
+[    0.004180] GICv3: CPU1: found redistributor 100 region 0:0x000000000c060000
+[    0.004205] CPU1: Booted secondary processor 0x0000000100 [0x412fd050]
+[    0.004919] Detected VIPT I-cache on CPU2
+[    0.004951] GICv3: CPU2: found redistributor 200 region 0:0x000000000c080000
+[    0.004969] CPU2: Booted secondary processor 0x0000000200 [0x412fd050]
+[    0.005627] Detected VIPT I-cache on CPU3
+[    0.005654] GICv3: CPU3: found redistributor 300 region 0:0x000000000c0a0000
+[    0.005669] CPU3: Booted secondary processor 0x0000000300 [0x412fd050]
+[    0.006430] Detected VIPT I-cache on CPU4
+[    0.006456] GICv3: CPU4: found redistributor 400 region 0:0x000000000c0c0000
+[    0.006469] CPU4: Booted secondary processor 0x0000000400 [0x412fd050]
+[    0.007129] Detected VIPT I-cache on CPU5
+[    0.007156] GICv3: CPU5: found redistributor 500 region 0:0x000000000c0e0000
+[    0.007170] CPU5: Booted secondary processor 0x0000000500 [0x412fd050]
+[    0.007908] CPU features: detected: Spectre-v4
+[    0.007916] CPU features: detected: Spectre-BHB
+[    0.007921] CPU features: detected: SSBS not fully self-synchronizing
+[    0.007925] Detected PIPT I-cache on CPU6
+[    0.007971] GICv3: CPU6: found redistributor 600 region 0:0x000000000c100000
+[    0.007991] CPU6: Booted secondary processor 0x0000000600 [0x411fd410]
+[    0.008756] Detected PIPT I-cache on CPU7
+[    0.008809] GICv3: CPU7: found redistributor 700 region 0:0x000000000c120000
+[    0.008831] CPU7: Booted secondary processor 0x0000000700 [0x411fd410]
+[    0.008924] smp: Brought up 1 node, 8 CPUs
+[    0.009146] SMP: Total of 8 processors activated.
+[    0.009159] CPU features: detected: 32-bit EL0 Support
+[    0.009172] CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+[    0.009188] CPU features: detected: Common not Private translations
+[    0.009201] CPU features: detected: CRC32 instructions
+[    0.009213] CPU features: detected: RCpc load-acquire (LDAPR)
+[    0.009219] CPU features: detected: LSE atomic instructions
+[    0.009225] CPU features: detected: Privileged Access Never
+[    0.009230] CPU features: detected: RAS Extension Support
+[    0.009238] CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+[    0.009302] CPU: All CPU(s) started at EL2
+[    0.009308] alternatives: applying system-wide alternatives
+[    0.015290] devtmpfs: initialized
+[    0.025403] Registered cp15_barrier emulation handler
+[    0.025426] Registered setend emulation handler
+[    0.025564] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.025596] futex hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[    0.027544] pinctrl core: initialized pinctrl subsystem
+[    0.027888] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.029686] DMA: preallocated 1024 KiB GFP_KERNEL pool for atomic allocations
+[    0.030384] DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.030999] DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.031059] audit: initializing netlink subsys (disabled)
+[    0.031185] audit: type=2000 audit(0.027:1): state=initialized audit_enabled=0 res=1
+[    0.031780] thermal_sys: Registered thermal governor 'step_wise'
+[    0.031784] thermal_sys: Registered thermal governor 'user_space'
+[    0.031794] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.031825] cpuidle: using governor ladder
+[    0.031844] cpuidle: using governor menu
+[    0.031977] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.032113] ASID allocator initialised with 32768 entries
+[    0.033528] printk: console [ramoops-1] enabled
+[    0.033675] pstore: Registered ramoops as persistent store backend
+[    0.033686] ramoops: using 0x100000@0xffec4000, ecc: 0
+[    0.040964] /soc/interrupt-controller@c000000: Fixed dependency cycle(s) with /soc/interrupt-controller@c000000
+[    0.041138] /soc/mailbox@10320000: Fixed dependency cycle(s) with /soc/mailbox@10320000
+[    0.041354] /soc/i2c@11ec0000/camera-sub-sensor@37: Fixed dependency cycle(s) with /soc/seninf-top@16010000/csi-receiver@1
+[    0.041392] /soc/i2c@11ec1000/camera-main-sensor@31: Fixed dependency cycle(s) with /soc/seninf-top@16010000/csi-receiver@0
+[    0.041535] /soc/seninf-top@16010000/csi-receiver@0: Fixed dependency cycle(s) with /soc/i2c@11ec1000/camera-main-sensor@31
+[    0.041557] /soc/seninf-top@16010000/csi-receiver@1: Fixed dependency cycle(s) with /soc/i2c@11ec0000/camera-sub-sensor@37
+[    0.041672] /soc/dsi@1c008000: Fixed dependency cycle(s) with /soc/dsi@1c008000/panel
+[    0.041696] /soc/dsi@1c008000/panel: Fixed dependency cycle(s) with /soc/dsi@1c008000
+[    0.041805] /soc/dp-intf@1c113000: Fixed dependency cycle(s) with /soc/dp-tx@1c600000
+[    0.041859] /soc/dp-tx@1c600000: Fixed dependency cycle(s) with /soc/dp-intf@1c113000
+[    0.045169] gpiochip_find_base: found new base at 322
+[    0.045213] gpio gpiochip0: (pinctrl_paris): created GPIO range 0->175 ==> 10005000.pinctrl PIN 0->175
+[    0.045431] gpio gpiochip0: (pinctrl_paris): added GPIO chardev (254:0)
+[    0.045475] gpio gpiochip0: registered GPIOs 322 to 511 on pinctrl_paris
+[    0.046555] /soc/mailbox@10320000: Fixed dependency cycle(s) with /soc/mailbox@10320000
+[    0.050490] /soc/i2c@11ec0000/camera-sub-sensor@37: Fixed dependency cycle(s) with /soc/seninf-top@16010000/csi-receiver@1
+[    0.050667] /soc/i2c@11ec1000/camera-main-sensor@31: Fixed dependency cycle(s) with /soc/seninf-top@16010000/csi-receiver@0
+[    0.055563] /soc/seninf-top@16010000/csi-receiver@0: Fixed dependency cycle(s) with /soc/i2c@11ec1000/camera-main-sensor@31
+[    0.055593] /soc/seninf-top@16010000/csi-receiver@1: Fixed dependency cycle(s) with /soc/i2c@11ec0000/camera-sub-sensor@37
+[    0.059046] /soc/dsi@1c008000: Fixed dependency cycle(s) with /soc/dsi@1c008000/panel
+[    0.059127] /soc/dsi@1c008000/panel: Fixed dependency cycle(s) with /soc/dsi@1c008000
+[    0.062163] /soc/dp-intf@1c113000: Fixed dependency cycle(s) with /soc/dp-tx@1c600000
+[    0.063384] /soc/dp-intf@1c113000: Fixed dependency cycle(s) with /soc/dp-tx@1c600000
+[    0.063453] /soc/dp-tx@1c600000: Fixed dependency cycle(s) with /soc/dp-intf@1c113000
+[    0.065734] KASLR enabled
+[    0.070554] cryptd: max_cpu_qlen set to 1000
+[    0.087064] raid6: neonx8   gen()  3568 MB/s
+[    0.104110] raid6: neonx4   gen()  3559 MB/s
+[    0.121143] raid6: neonx2   gen()  3550 MB/s
+[    0.138173] raid6: neonx1   gen()  3137 MB/s
+[    0.155215] raid6: int64x8  gen()  1898 MB/s
+[    0.172238] raid6: int64x4  gen()  2053 MB/s
+[    0.189281] raid6: int64x2  gen()  1731 MB/s
+[    0.206313] raid6: int64x1  gen()  1387 MB/s
+[    0.206321] raid6: using algorithm neonx8 gen() 3568 MB/s
+[    0.223336] raid6: .... xor() 2898 MB/s, rmw enabled
+[    0.223345] raid6: using neon recovery algorithm
+[    0.223916] reg-fixed-voltage ppvar-sys: GPIO lookup for consumer (null)
+[    0.223922] reg-fixed-voltage ppvar-sys: using device tree for GPIO lookup
+[    0.223931] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/ppvar-sys[0]'
+[    0.223949] of_get_named_gpiod_flags: can't parse 'gpio' property of node '/ppvar-sys[0]'
+[    0.223959] reg-fixed-voltage ppvar-sys: using lookup tables for GPIO lookup
+[    0.223963] reg-fixed-voltage ppvar-sys: No GPIO consumer (null) found
+[    0.224027] iommu: Default domain type: Translated 
+[    0.224041] iommu: DMA domain TLB invalidation policy: strict mode 
+[    0.224127] reg-fixed-voltage pp2800-ucam-x: GPIO lookup for consumer (null)
+[    0.224127] reg-fixed-voltage pp1200-ucam-x: GPIO lookup for consumer (null)
+[    0.224131] reg-fixed-voltage pp1200-ucam-x: using device tree for GPIO lookup
+[    0.224133] reg-fixed-voltage pp2800-ucam-x: using device tree for GPIO lookup
+[    0.224140] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/pp1200-ucam-x[0]'
+[    0.224141] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/pp2800-ucam-x[0]'
+[    0.224157] of_get_named_gpiod_flags: parsed 'gpio' property of node '/pp2800-ucam-x[0]' - status (0)
+[    0.224157] of_get_named_gpiod_flags: parsed 'gpio' property of node '/pp1200-ucam-x[0]' - status (0)
+[    0.224177] gpio gpiochip0: Persistence not supported for GPIO 142
+[    0.224184] gpio gpiochip0: Persistence not supported for GPIO 140
+[    0.224377] SCSI subsystem initialized
+[    0.224485] usbcore: registered new interface driver usbfs
+[    0.224517] usbcore: registered new interface driver hub
+[    0.224542] usbcore: registered new device driver usb
+[    0.224612] mc: Linux media interface: v0.10
+[    0.224640] videodev: Linux video capture interface: v2.00
+[    0.225593] mediatek,efuse 11f20000.efuse: GPIO lookup for consumer wp
+[    0.225600] mediatek,efuse 11f20000.efuse: using device tree for GPIO lookup
+[    0.225609] of_get_named_gpiod_flags: can't parse 'wp-gpios' property of node '/soc/efuse@11f20000[0]'
+[    0.225622] of_get_named_gpiod_flags: can't parse 'wp-gpio' property of node '/soc/efuse@11f20000[0]'
+[    0.225632] mediatek,efuse 11f20000.efuse: using lookup tables for GPIO lookup
+[    0.225636] mediatek,efuse 11f20000.efuse: No GPIO consumer wp found
+[    0.226066] Advanced Linux Sound Architecture Driver Initialized.
+[    0.226350] Bluetooth: bt_init() Core ver 2.22
+[    0.226376] NET: Registered PF_BLUETOOTH protocol family
+[    0.226385] Bluetooth: bt_init() HCI device and connection manager initialized
+[    0.226398] Bluetooth: hci_sock_init() HCI socket layer initialized
+[    0.226408] Bluetooth: l2cap_init_sockets() L2CAP socket layer initialized
+[    0.226433] Bluetooth: sco_init() SCO socket layer initialized
+[    0.226647] vgaarb: loaded
+[    0.226875] clocksource: Switched to clocksource arch_sys_counter
+[    0.227106] VFS: Disk quotas dquot_6.6.0
+[    0.227147] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.231132] NET: Registered PF_INET protocol family
+[    0.231410] IP idents hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.236215] tcp_listen_portaddr_hash hash table entries: 4096 (order: 4, 65536 bytes, linear)
+[    0.236295] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.236395] TCP established hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.237064] TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+[    0.238028] TCP: Hash tables configured (established 65536 bind 65536)
+[    0.238177] UDP hash table entries: 4096 (order: 5, 131072 bytes, linear)
+[    0.238258] UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes, linear)
+[    0.238434] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.238736] PCI: CLS 0 bytes, default 64
+[    0.239549] hw perfevents: enabled with armv8_cortex_a55 PMU driver, 7 counters available
+[    0.239847] hw perfevents: enabled with armv8_cortex_a78 PMU driver, 7 counters available
+[    0.240494] kvm [1]: IPA Size Limit: 40 bits
+[    0.240524] kvm [1]: GICv3: no GICV resource entry
+[    0.240533] kvm [1]: disabling GICv2 emulation
+[    0.240558] kvm [1]: GIC system register CPU interface enabled
+[    0.240694] kvm [1]: vgic interrupt IRQ18
+[    0.240839] kvm [1]: VHE mode initialized successfully
+[    0.259219] Initialise system trusted keyrings
+[    0.259448] workingset: timestamp_bits=46 max_order=21 bucket_order=0
+[    0.263610] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.263875] fuse: init (API version 7.38)
+[    0.298675] xor: measuring software checksum speed
+[    0.299270]    8regs           :  5638 MB/sec
+[    0.299860]    32regs          :  5667 MB/sec
+[    0.300311]    arm64_neon      :  7489 MB/sec
+[    0.300320] xor: using function: arm64_neon (7489 MB/sec)
+[    0.300333] Key type asymmetric registered
+[    0.300341] Asymmetric key parser 'x509' registered
+[    0.300386] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 244)
+[    0.300488] io scheduler mq-deadline registered
+[    0.300498] io scheduler kyber registered
+[    0.300569] io scheduler bfq registered
+[    0.303317] mediatek-mipi-tx 11c80000.phy: can't get nvmem_cell_get, ignore it
+[    0.322912] mdw_init register mdw_mem...
+[    0.322929] mdw_mem_rsc_init +
+[    0.323222] apumem_init:107
+[    0.323233] mdw_init register misc...
+[    0.323350] mdw_init register rpmsg...
+[    0.323369] mdw_init init done
+[    0.325840] mtk-mmsys 14000000.clock-controller: error -2 can't parse gce-client-reg property (0)
+[    0.327738] mtk-mmsys 14f00000.clock-controller: error -2 can't parse gce-client-reg property (0)
+[    0.331665] mtk-socinfo mtk-socinfo.0.auto: MediaTek Kompanio 838 (MT8188) SoC detected.
+[    0.332572] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+[    0.354065] 11001100.serial: ttyS0 at MMIO 0x11001100 (irq = 255, base_baud = 1625000) is a ST16650V2
+[    0.360630] usbcore: registered new interface driver udl
+[    0.368438] loop: module loaded
+[    0.368634] lkdtm: No crash points registered, enable through debugfs
+[    0.369728] mtk-pmic-keys: Failed to locate of_node [id: -1]
+[    0.370315] vmodem: Bringing 750000uV into 775000-775000uV
+[    0.372282] vgpu11_sshub: Bringing 400000uV into 550000-550000uV
+[    0.375572] spi-nor spi3.0: w25q64jwm (8192 Kbytes)
+[    0.375949] mtk-spi-nor 1132c000.spi: spi frequency: 52000000 Hz
+[    0.376636] wireguard: WireGuard 1.0.0 loaded. See www.wireguard.com for information.
+[    0.376651] wireguard: Copyright (C) 2015-2019 Jason A. Donenfeld <Jason@zx2c4.com>. All Rights Reserved.
+[    0.377016] mdio_bus fixed-0: GPIO lookup for consumer reset
+[    0.377023] mdio_bus fixed-0: using lookup tables for GPIO lookup
+[    0.377027] mdio_bus fixed-0: No GPIO consumer reset found
+[    0.377032] tun: Universal TUN/TAP device driver, 1.6
+[    0.377148] PPP generic driver version 2.4.2
+[    0.377373] PPP MPPE Compression module registered
+[    0.377947] pp0850_dvdd_sram_gpu: Bringing 850000uV into 800000-800000uV
+[    0.379248] usbcore: registered new interface driver cdc_acm
+[    0.379261] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    0.379386] usbcore: registered new interface driver uas
+[    0.379418] usbcore: registered new interface driver usb-storage
+[    0.379501] UDC core: g_mass_storage: couldn't find an available UDC
+[    0.380983] mt6397-rtc mt6359-rtc: registered as rtc0
+[    0.381164] mt6397-rtc mt6359-rtc: setting system clock to 2026-11-27T20:40:42 UTC (1795812042)
+[    0.381211] i2c_dev: i2c /dev entries driver
+[    0.382288] vsram_md: Bringing 750000uV into 800000-800000uV
+[    0.384249] cr50_i2c 1-0050: ti50 DT TPM 2.0 (i2c 0x50 irq 27 id 0x504a)
+[    0.437192] /soc/seninf-top@16010000/csi-receiver@1: Fixed dependency cycle(s) with /soc/i2c@11ec0000/camera-sub-sensor@37
+[    0.437289] /soc/i2c@11ec0000/camera-sub-sensor@37: Fixed dependency cycle(s) with /soc/seninf-top@16010000/csi-receiver@1
+[    0.439245] at24 5-0050: GPIO lookup for consumer wp
+[    0.439253] at24 5-0050: using device tree for GPIO lookup
+[    0.439267] of_get_named_gpiod_flags: can't parse 'wp-gpios' property of node '/soc/i2c@11ec0000/eeprom@50[0]'
+[    0.439282] of_get_named_gpiod_flags: can't parse 'wp-gpio' property of node '/soc/i2c@11ec0000/eeprom@50[0]'
+[    0.439292] at24 5-0050: using lookup tables for GPIO lookup
+[    0.439297] at24 5-0050: No GPIO consumer wp found
+[    0.440804] at24 5-0050: 8192 byte 24c64 EEPROM, writable, 32 bytes/write
+[    0.441517] /soc/seninf-top@16010000/csi-receiver@0: Fixed dependency cycle(s) with /soc/i2c@11ec1000/camera-main-sensor@31
+[    0.441599] /soc/i2c@11ec1000/camera-main-sensor@31: Fixed dependency cycle(s) with /soc/seninf-top@16010000/csi-receiver@0
+[    0.442865] at24 6-0058: GPIO lookup for consumer wp
+[    0.442887] at24 6-0058: using device tree for GPIO lookup
+[    0.442896] of_get_named_gpiod_flags: can't parse 'wp-gpios' property of node '/soc/i2c@11ec1000/eeprom@58[0]'
+[    0.442910] of_get_named_gpiod_flags: can't parse 'wp-gpio' property of node '/soc/i2c@11ec1000/eeprom@58[0]'
+[    0.442919] at24 6-0058: using lookup tables for GPIO lookup
+[    0.442922] at24 6-0058: No GPIO consumer wp found
+[    0.443378] at24 6-0058: 8192 byte 24c64 EEPROM, writable, 32 bytes/write
+[    0.444839] gc05a2 5-0037: GPIO lookup for consumer reset
+[    0.444846] gc05a2 5-0037: using device tree for GPIO lookup
+[    0.444863] of_get_named_gpiod_flags: parsed 'reset-gpios' property of node '/soc/i2c@11ec0000/camera-sub-sensor@37[0]' - status (0)
+[    0.444897] gpio gpiochip0: Persistence not supported for GPIO 21
+[    0.445330] gc08a3 6-0031: GPIO lookup for consumer reset
+[    0.445336] gc08a3 6-0031: using device tree for GPIO lookup
+[    0.445347] of_get_named_gpiod_flags: parsed 'reset-gpios' property of node '/soc/i2c@11ec1000/camera-main-sensor@31[0]' - status (0)
+[    0.445365] gpio gpiochip0: Persistence not supported for GPIO 19
+[    0.457529] mtk-lvts-thermal 1100b000.thermal-sensor: golden temp=60
+[    0.457912] thermal thermal_zone0: power_allocator: sustainable_power will be estimated
+[    0.458679] thermal thermal_zone1: power_allocator: sustainable_power will be estimated
+[    0.459415] thermal thermal_zone2: power_allocator: sustainable_power will be estimated
+[    0.459975] thermal thermal_zone3: power_allocator: sustainable_power will be estimated
+[    0.460713] thermal thermal_zone4: power_allocator: sustainable_power will be estimated
+[    0.461408] thermal thermal_zone5: power_allocator: sustainable_power will be estimated
+[    0.462145] thermal thermal_zone6: power_allocator: sustainable_power will be estimated
+[    0.462691] thermal thermal_zone7: power_allocator: sustainable_power will be estimated
+[    0.463643] mtk-lvts-thermal 11278000.thermal-sensor: golden temp=60
+[    0.463947] thermal thermal_zone8: power_allocator: sustainable_power will be estimated
+[    0.464486] thermal thermal_zone9: power_allocator: sustainable_power will be estimated
+[    0.465188] thermal thermal_zone10: power_allocator: sustainable_power will be estimated
+[    0.465725] thermal thermal_zone11: power_allocator: sustainable_power will be estimated
+[    0.466598] thermal thermal_zone12: power_allocator: sustainable_power will be estimated
+[    0.467137] thermal thermal_zone13: power_allocator: sustainable_power will be estimated
+[    0.468708] mtk-wdt 10007000.watchdog: Watchdog enabled (timeout=31 sec, nowayout=0)
+[    0.469395] device-mapper: ioctl: 4.47.0-ioctl (2022-07-28) initialised: dm-devel@redhat.com
+[    0.469535] usbcore: registered new interface driver btusb
+[    0.469624] cpu cpu0: supply cpu not found, using dummy regulator
+[    0.469720] cpu cpu1: supply cpu not found, using dummy regulator
+[    0.469795] cpu cpu2: supply cpu not found, using dummy regulator
+[    0.469898] cpu cpu3: supply cpu not found, using dummy regulator
+[    0.469967] cpu cpu4: supply cpu not found, using dummy regulator
+[    0.470037] cpu cpu5: supply cpu not found, using dummy regulator
+[    0.470102] cpu cpu6: supply cpu not found, using dummy regulator
+[    0.470176] cpu cpu7: supply cpu not found, using dummy regulator
+[    0.472989] cpu cpu0: EM: created perf domain
+[    0.473298] cpu cpu6: EM: created perf domain
+[    0.474113] sdhci: Secure Digital Host Controller Interface driver
+[    0.474117] sdhci: Copyright(c) Pierre Ossman
+[    0.474288] sdhci-pltfm: SDHCI platform and OF driver helper
+[    0.474859] SMCCC: SOC_ID: ID = jep106:0426:8188 Revision = 0x00000000
+[    0.474878] hid: raw HID events driver (C) Jiri Kosina
+[    0.475027] usbcore: registered new interface driver usbhid
+[    0.475031] usbhid: USB HID core driver
+[    0.475040] mtk-msdc 11230000.mmc: GPIO lookup for consumer wp
+[    0.475046] mtk-msdc 11230000.mmc: using device tree for GPIO lookup
+[    0.475055] of_get_named_gpiod_flags: can't parse 'wp-gpios' property of node '/soc/mmc@11230000[0]'
+[    0.475067] of_get_named_gpiod_flags: can't parse 'wp-gpio' property of node '/soc/mmc@11230000[0]'
+[    0.475077] mtk-msdc 11230000.mmc: using lookup tables for GPIO lookup
+[    0.475081] mtk-msdc 11230000.mmc: No GPIO consumer wp found
+[    0.475274] spi_master spi0: will run message pump with realtime priority
+[    0.475711] mtk-apu-mailbox 190e1000.mailbox: registered mtk apu mailbox
+[    0.475938] mtk-scp 10720000.scp: invalid resource
+[    0.476068] mmc0: CQHCI version 5.10
+[    0.476498] platform 10500000.scp: assigned reserved memory node scp-mem-region
+[    0.478582] remoteproc remoteproc0: scp is available
+[    0.478614] remoteproc remoteproc0: powering up scp
+[    0.478619] remoteproc remoteproc0: Booting fw image mediatek/mt8188/scp.img, size 641844
+[    0.478625] platform 10500000.scp: IPI buf addr 0x000cfb40
+[    0.479324] platform 105d0000.scp: assigned reserved memory node scp-dual-mem-region
+[    0.479390] platform 105d0000.scp: assigned reserved memory node scp-isp-cma-region
+[    0.483272] remoteproc remoteproc1: scp is available
+[    0.483306] remoteproc remoteproc1: powering up scp
+[    0.483311] remoteproc remoteproc1: Booting fw image mediatek/mt8188/scp-dual.img, size 1712120
+[    0.483316] platform 105d0000.scp: IPI buf addr 0x0002eb40
+[    0.487024] optee: probing for conduit method.
+[    0.487031] optee: api uid mismatch
+[    0.487034] optee: probe of firmware:optee failed with error -22
+[    0.487819] es8326 0-0019: assuming static mclk
+[    0.488048] mt6359-sound mt6359-sound: mt6359_parse_dt() failed to read mic-type-1, use default (0)
+[    0.488255] tasdev-codec 0-004f: GPIO lookup for consumer reset
+[    0.488257] tasdev-codec 0-004f: using device tree for GPIO lookup
+[    0.488275] of_get_named_gpiod_flags: parsed 'reset-gpios' property of node '/soc/i2c@11280000/tas2563@4f[0]' - status (0)
+[    0.488287] gpio gpiochip0: Persistence not supported for GPIO 118
+[    0.491626] GACT probability NOT on
+[    0.493163] xt_time: kernel timezone is -0000
+[    0.493197] IPVS: Registered protocols ()
+[    0.493225] IPVS: Connection hash table configured (size=4096, memory=32Kbytes)
+[    0.493281] IPVS: ipvs loaded.
+[    0.493355] Initializing XFRM netlink socket
+[    0.493374] IPsec XFRM device driver
+[    0.493500] NET: Registered PF_INET6 protocol family
+[    0.493939] Segment Routing with IPv6
+[    0.493948] In-situ OAM (IOAM) with IPv6
+[    0.494006] NET: Registered PF_PACKET protocol family
+[    0.494012] NET: Registered PF_KEY protocol family
+[    0.494032] Bridge firewalling registered
+[    0.494092] Bluetooth: rfcomm_init_sockets() RFCOMM socket layer initialized
+[    0.494126] Bluetooth: rfcomm_init() RFCOMM ver 1.11
+[    0.494132] Bluetooth: hidp_init() HIDP (Human Interface Emulation) ver 1.2
+[    0.494137] Bluetooth: hidp_init_sockets() HIDP socket layer initialized
+[    0.494140] 8021q: 802.1Q VLAN Support v1.8
+[    0.494261] NET: Registered PF_VSOCK protocol family
+[    0.494626] registered taskstats version 1
+[    0.494652] Loading compiled-in X.509 certificates
+[    0.494695] Key type .fscrypt registered
+[    0.494699] Key type fscrypt-provisioning registered
+[    0.496655] Btrfs loaded, crc32c=crc32c-generic, zoned=no, fsverity=yes
+[    0.497120] pstore: Using crash dump compression: deflate
+[    0.497393] Key type encrypted registered
+[    0.502948] sbs-battery 7-000f: GPIO lookup for consumer sbs,battery-detect
+[    0.502961] sbs-battery 7-000f: using device tree for GPIO lookup
+[    0.502971] of_get_named_gpiod_flags: can't parse 'sbs,battery-detect-gpios' property of node '/soc/spi@1100a000/cros-ec@0/i2c-tunnel/sbs-battery@f[0]'
+[    0.502984] of_get_named_gpiod_flags: can't parse 'sbs,battery-detect-gpio' property of node '/soc/spi@1100a000/cros-ec@0/i2c-tunnel/sbs-battery@f[0]'
+[    0.502996] sbs-battery 7-000f: using lookup tables for GPIO lookup
+[    0.503001] sbs-battery 7-000f: No GPIO consumer sbs,battery-detect found
+[    0.506032] thermal thermal_zone15: power_allocator: sustainable_power will be estimated
+[    0.506200] sbs-battery 7-000f: sbs-battery: battery gas gauge device registered
+[    0.509788] reg-fixed-voltage regulator-pp3300-z1: GPIO lookup for consumer (null)
+[    0.509806] reg-fixed-voltage regulator-pp3300-z1: using device tree for GPIO lookup
+[    0.509815] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/regulator-pp3300-z1[0]'
+[    0.509831] of_get_named_gpiod_flags: can't parse 'gpio' property of node '/regulator-pp3300-z1[0]'
+[    0.509839] reg-fixed-voltage regulator-pp3300-z1: using lookup tables for GPIO lookup
+[    0.509843] reg-fixed-voltage regulator-pp3300-z1: No GPIO consumer (null) found
+[    0.510043] reg-fixed-voltage regulator-pp4200-s5: GPIO lookup for consumer (null)
+[    0.510054] reg-fixed-voltage regulator-pp4200-s5: using device tree for GPIO lookup
+[    0.510062] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/regulator-pp4200-s5[0]'
+[    0.510075] of_get_named_gpiod_flags: can't parse 'gpio' property of node '/regulator-pp4200-s5[0]'
+[    0.510086] reg-fixed-voltage regulator-pp4200-s5: using lookup tables for GPIO lookup
+[    0.510090] reg-fixed-voltage regulator-pp4200-s5: No GPIO consumer (null) found
+[    0.510130] reg-fixed-voltage regulator-pp5000-z1: GPIO lookup for consumer (null)
+[    0.510136] reg-fixed-voltage regulator-pp5000-z1: using device tree for GPIO lookup
+[    0.510144] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/regulator-pp5000-z1[0]'
+[    0.510154] of_get_named_gpiod_flags: can't parse 'gpio' property of node '/regulator-pp5000-z1[0]'
+[    0.510161] reg-fixed-voltage regulator-pp5000-z1: using lookup tables for GPIO lookup
+[    0.510165] reg-fixed-voltage regulator-pp5000-z1: No GPIO consumer (null) found
+[    0.510383] reg-fixed-voltage regulator-pp3300-wlan: GPIO lookup for consumer (null)
+[    0.510389] reg-fixed-voltage regulator-pp3300-wlan: using device tree for GPIO lookup
+[    0.510396] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/regulator-pp3300-wlan[0]'
+[    0.510418] of_get_named_gpiod_flags: parsed 'gpio' property of node '/regulator-pp3300-wlan[0]' - status (0)
+[    0.510443] gpio gpiochip0: Persistence not supported for GPIO 12
+[    0.510523] reg-fixed-voltage regulator-pp3300-mipi-tchscr: GPIO lookup for consumer (null)
+[    0.510529] reg-fixed-voltage regulator-pp3300-mipi-tchscr: using device tree for GPIO lookup
+[    0.510536] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/regulator-pp3300-mipi-tchscr[0]'
+[    0.510549] of_get_named_gpiod_flags: parsed 'gpio' property of node '/regulator-pp3300-mipi-tchscr[0]' - status (0)
+[    0.510562] gpio gpiochip0: Persistence not supported for GPIO 144
+[    0.510579] reg-fixed-voltage regulator-pp5000-usb-p1-vbus: GPIO lookup for consumer (null)
+[    0.510584] reg-fixed-voltage regulator-pp5000-usb-p1-vbus: using device tree for GPIO lookup
+[    0.510592] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/regulator-pp5000-usb-p1-vbus[0]'
+[    0.510606] of_get_named_gpiod_flags: parsed 'gpio' property of node '/regulator-pp5000-usb-p1-vbus[0]' - status (0)
+[    0.510620] gpio gpiochip0: Persistence not supported for GPIO 150
+[    0.513503] pwm-backlight backlight-lcd: GPIO lookup for consumer enable
+[    0.513509] pwm-backlight backlight-lcd: using device tree for GPIO lookup
+[    0.513525] of_get_named_gpiod_flags: parsed 'enable-gpios' property of node '/backlight-lcd[0]' - status (0)
+[    0.513540] gpio gpiochip0: Persistence not supported for GPIO 1
+[    0.513544] gpio-323 (enable): no flags found for enable
+[    0.515740] mtk-mmsys 1c01d000.syscon: error -2 can't parse gce-client-reg property (0)
+[    0.520760] mediatek-drm mediatek-drm.16.auto: Adding component match for /soc/ovl@1c000000
+[    0.520911] mediatek-drm mediatek-drm.16.auto: Adding component match for /soc/rdma@1c002000
+[    0.521024] mediatek-drm mediatek-drm.16.auto: Adding component match for /soc/color@1c003000
+[    0.521084] mediatek-drm mediatek-drm.16.auto: Adding component match for /soc/ccorr@1c004000
+[    0.521142] mediatek-drm mediatek-drm.16.auto: Adding component match for /soc/aal@1c005000
+[    0.521200] mediatek-drm mediatek-drm.16.auto: Adding component match for /soc/gamma@1c006000
+[    0.521331] mediatek-drm mediatek-drm.16.auto: Adding component match for /soc/dsi@1c008000
+[    0.521459] input: cros_ec as /devices/platform/soc/1100a000.spi/spi_master/spi0/spi0.0/1100a000.spi:cros-ec@0:keyboard-controller/input/input0
+[    0.521554] i2c_hid_of 4-0056: supply vdd not found, using dummy regulator
+[    0.521664] i2c_hid_of 4-0056: supply vddl not found, using dummy regulator
+[    0.528624] platform 10500000.scp: SCP is ready. FW version geralt_scp_v2.0.26170-7c45eb573
+[    0.528638] remoteproc remoteproc0: remote processor scp is now up
+[    0.528642] platform 10500000.scp: creating channel cros-ec-rpmsg addr 0xd
+[    0.528779] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: Failed to get id. type: 2, alias: 5
+[    0.528796] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: Skipping unknown component /soc/merge@1c110000
+[    0.531300] mediatek-drm mediatek-drm.18.auto: Adding component match for /soc/merge@1c110000
+[    0.531361] mediatek-drm mediatek-drm.18.auto: Adding component match for /soc/dp-intf@1c113000
+[    0.535341] platform 105d0000.scp: SCP is ready. FW version geralt_scp_core1_v2.0.26170-7c4
+[    0.535351] remoteproc remoteproc1: remote processor scp is now up
+[    0.535361] platform 105d0000.scp: creating channel cros-ec-rpmsg addr 0xd
+[    0.538716] xhci-mtk 11200000.usb: supply vusb33 not found, using dummy regulator
+[    0.538934] xhci-mtk 11200000.usb: uwk - reg:0x468, version:2
+[    0.539202] xhci-mtk 11200000.usb: xHCI Host Controller
+[    0.539358] xhci-mtk 11200000.usb: new USB bus registered, assigned bus number 1
+[    0.539588] xhci-mtk 11200000.usb: hcc params 0x01400f99 hci version 0x110 quirks 0x0000000000210010
+[    0.539632] xhci-mtk 11200000.usb: irq 284, io mem 0x11200000
+[    0.539729] xhci-mtk 11200000.usb: xHCI Host Controller
+[    0.539834] xhci-mtk 11200000.usb: new USB bus registered, assigned bus number 2
+[    0.539852] xhci-mtk 11200000.usb: Host supports USB 3.2 Enhanced SuperSpeed
+[    0.539976] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.01
+[    0.539991] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.540003] usb usb1: Product: xHCI Host Controller
+[    0.540012] usb usb1: Manufacturer: Linux 6.1.180-geralt-sku6_linux-gf5ac45983a68-dirty xhci-hcd
+[    0.540024] usb usb1: SerialNumber: 11200000.usb
+[    0.540326] hub 1-0:1.0: USB hub found
+[    0.540355] hub 1-0:1.0: 1 port detected
+[    0.540584] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[    0.540653] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.01
+[    0.540667] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.540679] usb usb2: Product: xHCI Host Controller
+[    0.540689] usb usb2: Manufacturer: Linux 6.1.180-geralt-sku6_linux-gf5ac45983a68-dirty xhci-hcd
+[    0.540700] usb usb2: SerialNumber: 11200000.usb
+[    0.540967] hub 2-0:1.0: USB hub found
+[    0.540992] hub 2-0:1.0: 1 port detected
+[    0.541432] xhci-mtk 112a0000.usb: supply vbus not found, using dummy regulator
+[    0.541513] xhci-mtk 112a0000.usb: supply vusb33 not found, using dummy regulator
+[    0.541608] xhci-mtk 112a0000.usb: uwk - reg:0x470, version:2
+[    0.541827] xhci-mtk 112a0000.usb: xHCI Host Controller
+[    0.541947] xhci-mtk 112a0000.usb: new USB bus registered, assigned bus number 3
+[    0.542033] xhci-mtk 112a0000.usb: USB3 root hub has no ports
+[    0.542046] xhci-mtk 112a0000.usb: hcc params 0x01400f99 hci version 0x110 quirks 0x0000000020210010
+[    0.542085] xhci-mtk 112a0000.usb: irq 285, io mem 0x112a0000
+[    0.542166] xhci-mtk 112a0000.usb: xHCI Host Controller
+[    0.542272] xhci-mtk 112a0000.usb: new USB bus registered, assigned bus number 4
+[    0.542289] xhci-mtk 112a0000.usb: Host supports USB 3.0 SuperSpeed
+[    0.542375] usb usb3: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.01
+[    0.542390] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.542402] usb usb3: Product: xHCI Host Controller
+[    0.542411] usb usb3: Manufacturer: Linux 6.1.180-geralt-sku6_linux-gf5ac45983a68-dirty xhci-hcd
+[    0.542422] usb usb3: SerialNumber: 112a0000.usb
+[    0.542676] hub 3-0:1.0: USB hub found
+[    0.542705] hub 3-0:1.0: 1 port detected
+[    0.542920] usb usb4: We don't know the algorithms for LPM for this host, disabling LPM.
+[    0.542987] usb usb4: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.01
+[    0.543001] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.543013] usb usb4: Product: xHCI Host Controller
+[    0.543022] usb usb4: Manufacturer: Linux 6.1.180-geralt-sku6_linux-gf5ac45983a68-dirty xhci-hcd
+[    0.543034] usb usb4: SerialNumber: 112a0000.usb
+[    0.543276] hub 4-0:1.0: USB hub found
+[    0.543301] hub 4-0:1.0: config failed, hub doesn't have any ports! (err -19)
+[    0.543661] xhci-mtk 112b0000.usb: supply vbus not found, using dummy regulator
+[    0.543745] xhci-mtk 112b0000.usb: supply vusb33 not found, using dummy regulator
+[    0.543827] xhci-mtk 112b0000.usb: uwk - reg:0x460, version:2
+[    0.544040] xhci-mtk 112b0000.usb: xHCI Host Controller
+[    0.544154] xhci-mtk 112b0000.usb: new USB bus registered, assigned bus number 5
+[    0.544239] xhci-mtk 112b0000.usb: USB3 root hub has no ports
+[    0.544252] xhci-mtk 112b0000.usb: hcc params 0x01400f99 hci version 0x110 quirks 0x0000000000210010
+[    0.544288] xhci-mtk 112b0000.usb: irq 286, io mem 0x112b0000
+[    0.544373] xhci-mtk 112b0000.usb: xHCI Host Controller
+[    0.544487] xhci-mtk 112b0000.usb: new USB bus registered, assigned bus number 6
+[    0.544503] xhci-mtk 112b0000.usb: Host supports USB 3.0 SuperSpeed
+[    0.544589] usb usb5: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.01
+[    0.544604] usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.544615] usb usb5: Product: xHCI Host Controller
+[    0.544625] usb usb5: Manufacturer: Linux 6.1.180-geralt-sku6_linux-gf5ac45983a68-dirty xhci-hcd
+[    0.544636] usb usb5: SerialNumber: 112b0000.usb
+[    0.544897] hub 5-0:1.0: USB hub found
+[    0.544922] hub 5-0:1.0: 1 port detected
+[    0.545131] usb usb6: We don't know the algorithms for LPM for this host, disabling LPM.
+[    0.545198] usb usb6: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.01
+[    0.545212] usb usb6: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.545224] usb usb6: Product: xHCI Host Controller
+[    0.545233] usb usb6: Manufacturer: Linux 6.1.180-geralt-sku6_linux-gf5ac45983a68-dirty xhci-hcd
+[    0.545245] usb usb6: SerialNumber: 112b0000.usb
+[    0.545486] hub 6-0:1.0: USB hub found
+[    0.545511] hub 6-0:1.0: config failed, hub doesn't have any ports! (err -19)
+[    0.547128] mtk-apu 19001000.remoteproc: Adding to iommu group 0
+[    0.550497] input: cros_ec_buttons as /devices/platform/soc/1100a000.spi/spi_master/spi0/spi0.0/1100a000.spi:cros-ec@0:keyboard-controller/input/input1
+[    0.550498] hw_logger device not found
+[    0.550711] remoteproc remoteproc2: releasing remoteproc
+[    0.557257] reg-fixed-voltage regulator-ppvar-mipi-disp-avdd: GPIO lookup for consumer (null)
+[    0.557263] reg-fixed-voltage regulator-ppvar-mipi-disp-avdd: using device tree for GPIO lookup
+[    0.557272] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/regulator-ppvar-mipi-disp-avdd[0]'
+[    0.557292] of_get_named_gpiod_flags: parsed 'gpio' property of node '/regulator-ppvar-mipi-disp-avdd[0]' - status (0)
+[    0.557313] gpio gpiochip0: Persistence not supported for GPIO 3
+[    0.557388] reg-fixed-voltage regulator-ppvar-mipi-disp-avee: GPIO lookup for consumer (null)
+[    0.557394] reg-fixed-voltage regulator-ppvar-mipi-disp-avee: using device tree for GPIO lookup
+[    0.557401] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/regulator-ppvar-mipi-disp-avee[0]'
+[    0.557416] of_get_named_gpiod_flags: parsed 'gpio' property of node '/regulator-ppvar-mipi-disp-avee[0]' - status (0)
+[    0.557429] gpio gpiochip0: Persistence not supported for GPIO 4
+[    0.557475] reg-fixed-voltage regulator-pp1800-ldo-z1: GPIO lookup for consumer (null)
+[    0.557477] reg-fixed-voltage regulator-pp1800-ldo-z1: using device tree for GPIO lookup
+[    0.557481] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/regulator-pp1800-ldo-z1[0]'
+[    0.557486] of_get_named_gpiod_flags: can't parse 'gpio' property of node '/regulator-pp1800-ldo-z1[0]'
+[    0.557493] reg-fixed-voltage regulator-pp1800-ldo-z1: using lookup tables for GPIO lookup
+[    0.557495] reg-fixed-voltage regulator-pp1800-ldo-z1: No GPIO consumer (null) found
+[    0.557940] reg-fixed-voltage regulator-pp3300-s3: GPIO lookup for consumer (null)
+[    0.557946] reg-fixed-voltage regulator-pp3300-s3: using device tree for GPIO lookup
+[    0.557953] of_get_named_gpiod_flags: can't parse 'gpios' property of node '/regulator-pp3300-s3[0]'
+[    0.557962] of_get_named_gpiod_flags: can't parse 'gpio' property of node '/regulator-pp3300-s3[0]'
+[    0.557969] reg-fixed-voltage regulator-pp3300-s3: using lookup tables for GPIO lookup
+[    0.557972] reg-fixed-voltage regulator-pp3300-s3: No GPIO consumer (null) found
+[    0.558016] apu_hw_logger 19024000.apusys-hw-logger: Adding to iommu group 1
+[    0.562381] apumem_driver soc:mtk-apu-mem-code: Adding to iommu group 1
+[    0.562410] apumem_probe start, dev:soc:mtk-apu-mem-code
+[    0.562420] apumem_probe mask 0x3ffffffff type 1
+[    0.562429] apumem_probe dma_set_mask_and_coherent 0x3ffffffff type 1
+[    0.562438] apumem_probe dma_set_mask 0x3ffffffff type 1
+[    0.562448] Register type[1] Done
+[    0.562455] apumem_probe +
+[    0.562660] apumem_driver soc:mtk-apu-mem-data: Adding to iommu group 2
+[    0.562744] apumem_probe start, dev:soc:mtk-apu-mem-data
+[    0.562756] apumem_probe mask 0x3ffffffff type 2
+[    0.562765] apumem_probe dma_set_mask_and_coherent 0x3ffffffff type 2
+[    0.562774] apumem_probe dma_set_mask 0x3ffffffff type 2
+[    0.562783] Register type[2] Done
+[    0.562790] apumem_probe +
+[    0.564258] mtk-power-controller 10006000.syscon:power-controller: /soc/syscon@10006000/power-controller/power-domain@15/power-domain@16/power-domain@17/power-domain@19: A default off power domain has been ON
+[    0.564618] mtk-power-controller 10006000.syscon:power-controller: /soc/syscon@10006000/power-controller/power-domain@5: A default off power domain has been ON
+[    0.564655] mtk-power-controller 10006000.syscon:power-controller: /soc/syscon@10006000/power-controller/power-domain@6: A default off power domain has been ON
+[    0.564757] mtk-power-controller 10006000.syscon:power-controller: /soc/syscon@10006000/power-controller/power-domain@10/power-domain@11/power-domain@13: A default off power domain has been ON
+[    0.566255] mediatek-mutex 1c016000.mutex: error -2 can't parse gce-client-reg property (0)
+[    0.566414] mediatek-mutex 1c101000.mutex: error -2 can't parse gce-client-reg property (0)
+[    0.570028] cros-ec-spi spi0.0: Chrome EC device registered
+[    0.570359] /soc/dsi@1c008000: Fixed dependency cycle(s) with /soc/dsi@1c008000/panel
+[    0.570478] /soc/dsi@1c008000/panel: Fixed dependency cycle(s) with /soc/dsi@1c008000
+[    0.570989] panel-himax-hx83102 1c008000.dsi.0: GPIO lookup for consumer enable
+[    0.570995] panel-himax-hx83102 1c008000.dsi.0: using device tree for GPIO lookup
+[    0.571007] of_get_named_gpiod_flags: parsed 'enable-gpios' property of node '/soc/dsi@1c008000/panel[0]' - status (0)
+[    0.571027] gpio gpiochip0: Persistence not supported for GPIO 25
+[    0.575264] panfrost 13000000.gpu: clock rate = 390000000
+[    0.576791] sbs-battery 7-000f: I2C adapter does not support I2C_FUNC_SMBUS_READ_BLOCK_DATA.
+               Fallback method does not support PEC.
+[    0.578418] panfrost 13000000.gpu: mali-g57 id 0x9093 major 0x0 minor 0x0 status 0x0
+[    0.578434] panfrost 13000000.gpu: features: 00000000,000019f7, issues: 00000003,80000400
+[    0.578448] panfrost 13000000.gpu: Features: L2:0x08130206 Shader:0x00000000 Tiler:0x00000809 Mem:0x1 MMU:0x00002830 AS:0xff JS:0x7
+[    0.578463] panfrost 13000000.gpu: shader_present=0x10005 l2_present=0x1
+[    0.579504] [drm] Initialized panfrost 1.2.0 20180908 for 13000000.gpu on minor 0
+[    0.581518] seninf-core 16010000.seninf-top: get_seninf_cfg: mtk_csi_phy_ver = mtk_csi_phy_2_0
+[    0.581536] seninf-core 16010000.seninf-top: get_seninf_cfg: seninf_num = 4, mux_num = 8, cam_mux_num = 11, pref_mux_num =11
+[    0.581736] seninf-core 16010000.seninf-top: failed to get clk_top_seninf2
+[    0.581751] seninf-core 16010000.seninf-top: failed to get clk_top_seninf3
+[    0.581762] seninf-core 16010000.seninf-top: failed to get clk_top_seninf4
+[    0.581774] seninf-core 16010000.seninf-top: failed to get clk_top_seninf5
+[    0.582144] seninf 16010000.seninf-top:csi-receiver@0: seninf d_settlte/d_settle_ck/d_trail/c_settle= 0x10/0x11/0x34/0x10
+[    0.582162] seninf 16010000.seninf-top:csi-receiver@0: ctx->port = 0
+[    0.582173] seninf 16010000.seninf-top:csi-receiver@0: read csi efuse returned with error cell -1
+[    0.582185] seninf 16010000.seninf-top:csi-receiver@0: Failed to read efuse data
+[    0.582261] seninf 16010000.seninf-top:csi-receiver@0: seninf_probe: port=0
+[    0.582274] seninf 16010000.seninf-top:csi-receiver@0: camsys | [seninf_probe] success
+[    0.582621] seninf 16010000.seninf-top:csi-receiver@1: seninf d_settlte/d_settle_ck/d_trail/c_settle= 0x10/0x11/0x34/0x10
+[    0.582639] seninf 16010000.seninf-top:csi-receiver@1: ctx->port = 1
+[    0.582649] seninf 16010000.seninf-top:csi-receiver@1: read csi efuse returned with error cell -1
+[    0.582661] seninf 16010000.seninf-top:csi-receiver@1: Failed to read efuse data
+[    0.582713] seninf 16010000.seninf-top:csi-receiver@1: seninf_probe: port=1
+[    0.582726] seninf 16010000.seninf-top:csi-receiver@1: camsys | [seninf_probe] success
+[    0.583544] mtk-cam 16000000.camisp: camsys | start mtk_cam_master_register
+[    0.584165] mtk-cam 16000000.camisp: mtk_cam_master_register success
+[    0.584314] mtk-cam 16000000.camisp: camsys | mtk_cam_async_add_by_driver add 16030000.cam-raw-a
+[    0.584335] mtk-cam 16000000.camisp: camsys | mtk_cam_async_add_by_driver add 16070000.cam-raw-b
+[    0.584490] mtk-cam 16000000.camisp: camsys | mtk_cam_async_add_by_driver add 16050000.cam-yuv-a
+[    0.584506] mtk-cam 16000000.camisp: camsys | mtk_cam_async_add_by_driver add 16090000.cam-yuv-b
+[    0.584698] mtk-cam 16000000.camisp: camsys | mtk_cam_async_add_by_driver add 16010000.seninf-top:csi-receiver@0
+[    0.584716] mtk-cam 16000000.camisp: camsys | mtk_cam_async_add_by_driver add 16010000.seninf-top:csi-receiver@1
+[    0.584730] mtk-cam 16000000.camisp: dependent module #: raw 2, yuv 2, seninf 2
+[    0.584754] mtk-cam 16000000.camisp: cmasys | seninf-1 trigger mtk_cam_master_bound
+[    0.584773] seninf 16010000.seninf-top:csi-receiver@1: [seninf_notifier_bound] gc05a2 5-0037 bounded, bus_type:5, lanes:2
+[    0.584977] mtk-cam 16000000.camisp: cmasys | seninf-0 trigger mtk_cam_master_bound
+[    0.584994] seninf 16010000.seninf-top:csi-receiver@0: [seninf_notifier_bound] gc08a3 6-0031 bounded, bus_type:5, lanes:4
+[    0.585363] mtk-cam 16000000.camisp: camsys | [mtk_cam_probe] success
+[    0.585777] hx83102j spi1.0: himax_spi_drv_probe: Himax SPI driver probe
+[    0.585798] hx83102j spi1.0: GPIO lookup for consumer reset
+[    0.585802] hx83102j spi1.0: using device tree for GPIO lookup
+[    0.585815] of_get_named_gpiod_flags: parsed 'reset-gpios' property of node '/soc/spi@11010000/hid-hx-common-spi@0[0]' - status (0)
+[    0.585836] gpio gpiochip0: Persistence not supported for GPIO 5
+[    0.585847] hx83102j spi1.0: himax_parse_dt: firmware-name = himax_i2chid_1002.bin
+[    0.587717] remoteproc remoteproc2: remoteproc is available
+[    0.587772] remoteproc remoteproc2: powering up remoteproc
+[    0.587786] remoteproc remoteproc2: Booting fw image mediatek/mt8188/apusys.img, size 1699648
+[    0.594716] mtk-apu 19001000.remoteproc: mtk_apu_dram_boot_init: iommu_map done
+[    0.594751] mtk-apu 19001000.remoteproc: mtk_apu_rv_smc_call: smc call 8
+[    0.594767] mtk-apu 19001000.remoteproc: mtk_apu_setup_sec_mem: 0
+[    0.594778] mtk-apu 19001000.remoteproc: mtk_apu_start: try to boot uP
+[    0.596300] mtk-apu 19001000.remoteproc: mtk_apu_rv_smc_call: smc call 7
+[    0.597057] mtk-apu 19001000.remoteproc: mtk_apu_rv_smc_call: smc call 2
+[    0.597077] mtk-apu 19001000.remoteproc: mtk_apu_rv_smc_call: smc call 3
+[    0.597101] mtk-apu 19001000.remoteproc: mtk_apu_rv_smc_call: smc call 4
+[    0.597112] mtk-apu 19001000.remoteproc: mtk_apu_rv_smc_call: smc call 5
+[    0.600096] mtk-apu 19001000.remoteproc: APU uP boot done. boot time: 0 s, 2970385 ns. fw_ver: FW_VER/mt8188/acc29520cf79da02512b31f7f449a782887f0c4d/I8476eebd94edecd115094ee0ddd45f5bfa465ee5
+[    0.600118] remoteproc remoteproc2: remote processor remoteproc is now up
+[    0.601062] mtk-apu 19001000.remoteproc: creating channel mdla-tx-rpmsg addr 0x8
+[    0.602060] mtk-apu 19001000.remoteproc: creating channel mdla-rx-rpmsg addr 0x9
+[    0.603077] mtk-apu 19001000.remoteproc: creating channel apu-edma-rpmsg addr 0xb
+[    0.604066] mtk-apu 19001000.remoteproc: creating channel apu-mnoc-rpmsg addr 0xc
+[    0.604131] mt8188-audio 10b10000.audio-controller: assigned reserved memory node snd-dma-mem-region
+[    0.605068] mtk-apu 19001000.remoteproc: creating channel mvpu-tx-rpmsg addr 0xd
+[    0.606062] mtk-apu 19001000.remoteproc: creating channel mvpu-rx-rpmsg addr 0xe
+[    0.606977] mt8188-audio 10b10000.audio-controller: mtk_afe_combine_sub_dai(), num of dai 25
+[    0.607062] mtk-apu 19001000.remoteproc: creating channel apupwr-tx-rpmsg addr 0x6
+[    0.607081] mt8188-audio 10b10000.audio-controller: No cache defaults, reading back from HW
+[    0.608056] mtk-apu 19001000.remoteproc: creating channel apupwr-rx-rpmsg addr 0x7
+[    0.609073] mtk-apu 19001000.remoteproc: creating channel apu-mdw-rpmsg addr 0x4
+[    0.609175] mdw_rpmsg_probe +
+[    0.609188] apu-mdw-rpmsg 19001000.remoteproc.apu-mdw-rpmsg.4.-1: set mem done
+[    0.609233] apu-mdw-rpmsg 19001000.remoteproc.apu-mdw-rpmsg.4.-1: mdw dev init type(1-0)
+[    0.609300] apu-mdw-rpmsg 19001000.remoteproc.apu-mdw-rpmsg.4.-1: 0x00000000ffeff000
+[    0.609314] mdw_rpmsg_probe -
+[    0.610361] apu-mdw-rpmsg 19001000.remoteproc.apu-mdw-rpmsg.4.-1: [warn] apusys: rv infos(3)(0x16/0x16)(0x36/0x36)
+[    0.611637] mdw_rv_dev_init_func: late init done
+[    0.611851] mtk-pcie-gen3 112f0000.pcie: host bridge /soc/pcie@112f0000 ranges:
+[    0.611863] mtk-pcie-gen3 112f0000.pcie:      MEM 0x0020000000..0x0023ffffff -> 0x0020000000
+[    0.612081] mtk-pcie-gen3 112f0000.pcie: supply pcie12v not found, using dummy regulator
+[    0.612118] of_get_named_gpiod_flags: parsed 'dsc-reset-gpios' property of node '/soc/pcie@112f0000[0]' - status (0)
+[    0.612123] mtk-pcie-gen3 112f0000.pcie: GPIO lookup for consumer dsc-reset
+[    0.612124] mtk-pcie-gen3 112f0000.pcie: using device tree for GPIO lookup
+[    0.612128] of_get_named_gpiod_flags: parsed 'dsc-reset-gpios' property of node '/soc/pcie@112f0000[0]' - status (0)
+[    0.612138] gpio gpiochip0: Persistence not supported for GPIO 145
+[    0.612143] mtk-pcie-gen3 112f0000.pcie: Failed to get delay time of DSC, set it to default 5ms
+[    0.613367] mtk-msdc 11230000.mmc: Final PAD_DS_TUNE: 0x1481b
+[    0.614608] mmc0: Command Queue Engine enabled
+[    0.614625] mmc0: new HS400 Enhanced strobe MMC card at address 0001
+[    0.615037] mmcblk0: mmc0:0001 MMC128 117 GiB 
+[    0.617986]  mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14
+[    0.619582] mmcblk0boot0: mmc0:0001 MMC128 4.00 MiB 
+[    0.620107] mmcblk0boot1: mmc0:0001 MMC128 4.00 MiB 
+[    0.620580] mmcblk0rpmb: mmc0:0001 MMC128 16.0 MiB, chardev (241:0)
+[    0.669083] input: hid-over-i2c 18D1:50FF as /devices/platform/soc/11e01000.i2c/i2c-4/4-0056/0018:18D1:50FF.0001/input/input2
+[    0.669275] hid-multitouch 0018:18D1:50FF.0001: input,hidraw0: I2C HID v1.00 Device [hid-over-i2c 18D1:50FF] on 4-0056
+[    0.701186] mtk_apu_timesync_work_func 18
+[    0.737379] mtk-pcie-gen3 112f0000.pcie: PCI host bridge to bus 0000:00
+[    0.737387] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.737393] pci_bus 0000:00: root bus resource [mem 0x20000000-0x23ffffff]
+[    0.737415] pci 0000:00:00.0: [14c3:8188] type 01 class 0x060400
+[    0.737430] pci 0000:00:00.0: BAR 0 [mem 0x00000000-0x00007fff 64bit]
+[    0.737496] pci 0000:00:00.0: PME# supported from D0 D3hot D3cold
+[    0.739702] pci 0000:00:00.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[    0.739777] pci 0000:01:00.0: [14c3:7961] type 00 class 0x028000
+[    0.739806] pci 0000:01:00.0: BAR 0 [mem 0x00000000-0x000fffff 64bit pref]
+[    0.739824] pci 0000:01:00.0: BAR 2 [mem 0x00000000-0x00003fff 64bit pref]
+[    0.739842] pci 0000:01:00.0: BAR 4 [mem 0x00000000-0x00000fff 64bit pref]
+[    0.739970] pci 0000:01:00.0: supports D1 D2
+[    0.739974] pci 0000:01:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+[    0.742911] pci_bus 0000:01: busn_res: [bus 01-ff] end is updated to 01
+[    0.742926] pci 0000:00:00.0: bridge window [mem 0x20000000-0x201fffff 64bit pref]: assigned
+[    0.742931] pci 0000:00:00.0: BAR 0 [mem 0x20200000-0x20207fff 64bit]: assigned
+[    0.742940] pci 0000:01:00.0: BAR 0 [mem 0x20000000-0x200fffff 64bit pref]: assigned
+[    0.742956] pci 0000:01:00.0: BAR 2 [mem 0x20100000-0x20103fff 64bit pref]: assigned
+[    0.742971] pci 0000:01:00.0: BAR 4 [mem 0x20104000-0x20104fff 64bit pref]: assigned
+[    0.742986] pci 0000:00:00.0: PCI bridge to [bus 01]
+[    0.742992] pci 0000:00:00.0:   bridge window [mem 0x20000000-0x201fffff 64bit pref]
+[    0.743013] pci 0000:00:00.0: attach allowed to drvr pcieport [internal device]
+[    0.743073] pcieport 0000:00:00.0: Adding to iommu group 3
+[    0.743222] pcieport 0000:00:00.0: enabling device (0000 -> 0002)
+[    0.743582] pcieport 0000:00:00.0: PME: Signaling with IRQ 302
+[    0.743719] pcieport 0000:00:00.0: AER: enabled with IRQ 302
+[    0.743804] pci 0000:01:00.0: attach allowed to drvr mt7921e [internal device]
+[    0.743833] mt7921e 0000:01:00.0: Adding to iommu group 3
+[    0.743899] mt7921e 0000:01:00.0: enabling device (0000 -> 0002)
+[    0.747138] mt7921e 0000:01:00.0: ASIC revision: 79610010
+[    0.824652]  SVSB_GPU_LOW: svs_init02_isr_handler: VOP74~30:0x1c1e1f1f~0x1f1f1f20, DC:0x00000000
+[    0.824727]  SVSB_GPU_HIGH: svs_init02_isr_handler: VOP74~30:0x2527292b~0x2d313439, DC:0x00000000
+[    0.825444] mt7921e 0000:01:00.0: HW/SW Version: 0x8a108a10, Build Time: 20241106151007a
+
+[    0.825511] mtk-iommu 14018000.iommu: bound 1c023000.smi (ops 0xffffffeb7a9ec638)
+[    0.825520] mtk-iommu 14018000.iommu: bound 1c103000.smi (ops 0xffffffeb7a9ec638)
+[    0.825524] mtk-iommu 14018000.iommu: bound 14013000.smi (ops 0xffffffeb7a9ec638)
+[    0.825528] mtk-iommu 14018000.iommu: bound 14f03000.smi (ops 0xffffffeb7a9ec638)
+[    0.825532] mtk-iommu 14018000.iommu: bound 14e04000.smi (ops 0xffffffeb7a9ec638)
+[    0.825536] mtk-iommu 14018000.iommu: bound 15530000.smi (ops 0xffffffeb7a9ec638)
+[    0.825540] mtk-iommu 14018000.iommu: bound 15340000.smi (ops 0xffffffeb7a9ec638)
+[    0.825544] mtk-iommu 14018000.iommu: bound 16002000.smi (ops 0xffffffeb7a9ec638)
+[    0.825548] mtk-iommu 14018000.iommu: bound 15140000.smi (ops 0xffffffeb7a9ec638)
+[    0.825552] mtk-iommu 14018000.iommu: bound 16008000.smi (ops 0xffffffeb7a9ec638)
+[    0.825556] mtk-iommu 14018000.iommu: bound 16009000.smi (ops 0xffffffeb7a9ec638)
+[    0.825560] mtk-iommu 14018000.iommu: bound 1800d000.smi (ops 0xffffffeb7a9ec638)
+[    0.825564] mtk-iommu 14018000.iommu: bound 17201000.smi (ops 0xffffffeb7a9ec638)
+[    0.825975] mtk-iommu 1c028000.iommu: bound 1c022000.smi (ops 0xffffffeb7a9ec638)
+[    0.825982] mtk-iommu 1c028000.iommu: bound 1c102000.smi (ops 0xffffffeb7a9ec638)
+[    0.825985] mtk-iommu 1c028000.iommu: bound 14f02000.smi (ops 0xffffffeb7a9ec638)
+[    0.825989] mtk-iommu 1c028000.iommu: bound 15001000.smi (ops 0xffffffeb7a9ec638)
+[    0.825993] mtk-iommu 1c028000.iommu: bound 15120000.smi (ops 0xffffffeb7a9ec638)
+[    0.825997] mtk-iommu 1c028000.iommu: bound 15230000.smi (ops 0xffffffeb7a9ec638)
+[    0.826001] mtk-iommu 1c028000.iommu: bound 15630000.smi (ops 0xffffffeb7a9ec638)
+[    0.826005] mtk-iommu 1c028000.iommu: bound 16001000.smi (ops 0xffffffeb7a9ec638)
+[    0.826009] mtk-iommu 1c028000.iommu: bound 1600a000.smi (ops 0xffffffeb7a9ec638)
+[    0.826013] mtk-iommu 1c028000.iommu: bound 1600b000.smi (ops 0xffffffeb7a9ec638)
+[    0.826017] mtk-iommu 1c028000.iommu: bound 1a010000.smi (ops 0xffffffeb7a9ec638)
+[    0.826020] mtk-iommu 1c028000.iommu: bound 1802e000.smi (ops 0xffffffeb7a9ec638)
+[    0.826130] mediatek-disp-ovl 1c000000.ovl: Adding to iommu group 4
+[    0.827086] mediatek-dpi 1c113000.dp-intf: Found bridge node: /soc/dp-tx@1c600000
+[    0.827291] mediatek-drm mediatek-drm.16.auto: bound 1c000000.ovl (ops 0xffffffeb7a168b48)
+[    0.827298] mediatek-drm mediatek-drm.16.auto: bound 1c002000.rdma (ops 0xffffffeb7a169bb0)
+[    0.827302] mediatek-drm mediatek-drm.16.auto: bound 1c003000.color (ops 0xffffffeb7a168000)
+[    0.827306] mediatek-drm mediatek-drm.16.auto: bound 1c004000.ccorr (ops 0xffffffeb7a167cc8)
+[    0.827311] mediatek-drm mediatek-drm.16.auto: bound 1c005000.aal (ops 0xffffffeb7a167a58)
+[    0.827314] mediatek-drm mediatek-drm.16.auto: bound 1c006000.gamma (ops 0xffffffeb7a168340)
+[    0.828455] mediatek-drm mediatek-drm.16.auto: bound 1c008000.dsi (ops 0xffffffeb7a16e608)
+[    0.828646] mediatek-disp-ethdr 1c114000.ethdr: Adding to iommu group 4
+[    0.828812] mediatek-mdp-rdma 1c104000.rdma: Adding to iommu group 4
+[    0.828905] mediatek-mdp-rdma 1c105000.rdma: Adding to iommu group 4
+[    0.828991] mediatek-mdp-rdma 1c106000.rdma: Adding to iommu group 4
+[    0.829071] mediatek-mdp-rdma 1c107000.rdma: Adding to iommu group 4
+[    0.829153] mediatek-mdp-rdma 1c108000.rdma: Adding to iommu group 4
+[    0.829231] mediatek-mdp-rdma 1c109000.rdma: Adding to iommu group 4
+[    0.829313] mediatek-mdp-rdma 1c10a000.rdma: Adding to iommu group 4
+[    0.829392] mediatek-mdp-rdma 1c10b000.rdma: Adding to iommu group 4
+[    0.829408] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: bound 1c104000.rdma (ops 0xffffffeb7a16f370)
+[    0.829414] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: bound 1c105000.rdma (ops 0xffffffeb7a16f370)
+[    0.829417] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: bound 1c106000.rdma (ops 0xffffffeb7a16f370)
+[    0.829421] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: bound 1c107000.rdma (ops 0xffffffeb7a16f370)
+[    0.829425] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: bound 1c108000.rdma (ops 0xffffffeb7a16f370)
+[    0.829428] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: bound 1c109000.rdma (ops 0xffffffeb7a16f370)
+[    0.829432] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: bound 1c10a000.rdma (ops 0xffffffeb7a16f370)
+[    0.829435] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: bound 1c10b000.rdma (ops 0xffffffeb7a16f370)
+[    0.829439] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: bound 1c10c000.merge (ops 0xffffffeb7a1684f8)
+[    0.829443] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: bound 1c10d000.merge (ops 0xffffffeb7a1684f8)
+[    0.829447] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: bound 1c10e000.merge (ops 0xffffffeb7a1684f8)
+[    0.829451] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: bound 1c10f000.merge (ops 0xffffffeb7a1684f8)
+[    0.829455] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: bound 1c114000.ethdr (ops 0xffffffeb7a16f0c0)
+[    0.829459] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: bound 1c11d000.padding (ops 0xffffffeb7a16f510)
+[    0.829463] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: bound 1c11e000.padding (ops 0xffffffeb7a16f510)
+[    0.829466] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: bound 1c11f000.padding (ops 0xffffffeb7a16f510)
+[    0.829470] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: bound 1c120000.padding (ops 0xffffffeb7a16f510)
+[    0.829474] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: bound 1c121000.padding (ops 0xffffffeb7a16f510)
+[    0.829478] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: bound 1c122000.padding (ops 0xffffffeb7a16f510)
+[    0.829481] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: bound 1c123000.padding (ops 0xffffffeb7a16f510)
+[    0.829485] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.19.auto: bound 1c124000.padding (ops 0xffffffeb7a16f510)
+[    0.829568] mtk-aie-5.3 15310000.aie: Adding to iommu group 5
+[    0.830304] mtk-aie-5.3 15310000.aie: AIE : Success to mtk_aie_probe
+[    0.830485] mtk-jpeg 1a030000.jpeg-encoder: Adding to iommu group 6
+[    0.830562] mtk-jpeg 1a030000.jpeg-encoder: use 34bits: 1
+[    0.830664] mtk-jpeg 1a030000.jpeg-encoder: mtk-jpeg-enc device registered as /dev/video1 (81,5)
+[    0.830776] mtk-jpeg 1a040000.jpeg-decoder: Adding to iommu group 6
+[    0.830810] mtk-jpeg 1a040000.jpeg-decoder: use 34bits: 1
+[    0.830892] mtk-jpeg 1a040000.jpeg-decoder: mtk-jpeg-dec device registered as /dev/video2 (81,6)
+[    0.830989] mtk-vcodec-enc 1a020000.video-encoder: Adding to iommu group 6
+[    0.831351] mtk-vcodec-dec 18000000.video-decoder: Adding to iommu group 6
+[    0.831642] mtk-vdec-comp 18010000.vcodec-lat: Adding to iommu group 6
+[    0.831837] mtk-vdec-comp 18025000.vcodec-core: Adding to iommu group 6
+[    0.832250] mtk-cam raw 16030000.cam-raw-a: Adding to iommu group 5
+[    0.832807] mtk-cam raw 16030000.cam-raw-a: clk_num:11
+[    0.832814] mtk-cam 16000000.camisp: Entity type for entity cam-raw-a@16030000 was not initialized!
+[    0.832818] mtk-cam 16000000.camisp: cmasys | cam-raw-a@16030000 trigger mtk_cam_master_bound
+[    0.832822] mtk-cam raw 16030000.cam-raw-a: camsys | [mtk_raw_probe] success
+[    0.832925] mtk-cam raw 16070000.cam-raw-b: Adding to iommu group 5
+[    0.833070] mtk-cam raw 16070000.cam-raw-b: clk_num:11
+[    0.833075] mtk-cam 16000000.camisp: Entity type for entity cam-raw-b@16070000 was not initialized!
+[    0.833079] mtk-cam 16000000.camisp: cmasys | cam-raw-b@16070000 trigger mtk_cam_master_bound
+[    0.833082] mtk-cam raw 16070000.cam-raw-b: camsys | [mtk_raw_probe] success
+[    0.833166] mtk-cam yuv 16050000.cam-yuv-a: Adding to iommu group 5
+[    0.833255] mtk-cam yuv 16050000.cam-yuv-a: clk_num:6
+[    0.833261] mtk-cam 16000000.camisp: Entity type for entity cam-yuv-a@16050000 was not initialized!
+[    0.833264] mtk-cam 16000000.camisp: cmasys | cam-yuv-a@16050000 trigger mtk_cam_master_bound
+[    0.833268] mtk-cam yuv 16050000.cam-yuv-a: camsys | [mtk_yuv_probe] success
+[    0.833350] mtk-cam yuv 16090000.cam-yuv-b: Adding to iommu group 5
+[    0.833439] mtk-cam yuv 16090000.cam-yuv-b: clk_num:6
+[    0.833443] mtk-cam 16000000.camisp: Entity type for entity cam-yuv-b@16090000 was not initialized!
+[    0.833446] mtk-cam 16000000.camisp: cmasys | cam-yuv-b@16090000 trigger mtk_cam_master_bound
+[    0.833451] mtk-cam 16000000.camisp: cmasys | trigger mtk_cam_master_complete
+[    0.833485] mtk-cam raw 16030000.cam-raw-a: mtk_raw_pipeline_register: mtk-cam raw-0
+[    0.834230] mtk-cam raw 16070000.cam-raw-b: mtk_raw_pipeline_register: mtk-cam raw-1
+[    0.834937] mtk-cam 16000000.camisp: create pad link seninf-1 mtk-cam raw-0
+[    0.834941] mtk-cam 16000000.camisp: create pad link seninf-1 mtk-cam raw-1
+[    0.834944] mtk-cam 16000000.camisp: create pad link seninf-0 mtk-cam raw-0
+[    0.834948] mtk-cam 16000000.camisp: create pad link seninf-0 mtk-cam raw-1
+[    0.835061] mtk-cam 16000000.camisp: mtk_cam_master_complete success
+[    0.835065] mtk-cam yuv 16090000.cam-yuv-b: camsys | [mtk_yuv_probe] success
+[    0.835177] mtk-imgsys 15000000.imgsys-fw: Adding to iommu group 5
+[    0.839586] mtk-imgsys-larb soc:imgsys-l11b: Adding to iommu group 5
+[    0.839668] mtk-imgsys-larb soc:imgsys-l15: Adding to iommu group 5
+[    0.839742] mtk-imgsys-larb soc:imgsys-l10: Adding to iommu group 5
+[    0.839827] mtk-imgsys-larb soc:imgsys-l11A: Adding to iommu group 5
+[    0.839914] mtk-imgsys-larb soc:imgsys-l11C: Adding to iommu group 5
+[    0.842370] mediatek-dpi 1c113000.dp-intf: Found bridge node: /soc/dp-tx@1c600000
+[    0.842610] mediatek-drm mediatek-drm.16.auto: bound 1c000000.ovl (ops 0xffffffeb7a168b48)
+[    0.842619] mediatek-drm mediatek-drm.16.auto: bound 1c002000.rdma (ops 0xffffffeb7a169bb0)
+[    0.842623] mediatek-drm mediatek-drm.16.auto: bound 1c003000.color (ops 0xffffffeb7a168000)
+[    0.842628] mediatek-drm mediatek-drm.16.auto: bound 1c004000.ccorr (ops 0xffffffeb7a167cc8)
+[    0.842632] mediatek-drm mediatek-drm.16.auto: bound 1c005000.aal (ops 0xffffffeb7a167a58)
+[    0.842636] mediatek-drm mediatek-drm.16.auto: bound 1c006000.gamma (ops 0xffffffeb7a168340)
+[    0.843766] mediatek-drm mediatek-drm.16.auto: bound 1c008000.dsi (ops 0xffffffeb7a16e608)
+[    0.843772] mediatek-drm mediatek-drm.18.auto: bound mediatek-disp-ovl-adaptor.19.auto (ops 0xffffffeb7a1693b0)
+[    0.843777] mediatek-drm mediatek-drm.18.auto: bound 1c110000.merge (ops 0xffffffeb7a1684f8)
+[    0.854092] mediatek-drm mediatek-drm.18.auto: bound 1c113000.dp-intf (ops 0xffffffeb7a16ed50)
+[    0.854614] [drm] Initialized mediatek 1.0.0 20150513 for mediatek-drm.18.auto on minor 1
+[    0.894589] usb 2-1: new SuperSpeed USB device number 2 using xhci-mtk
+[    0.914934] usb 2-1: New USB device found, idVendor=0bda, idProduct=0411, bcdDevice= 1.26
+[    0.914942] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    0.914946] usb 2-1: Product: USB3.2 Hub
+[    0.914949] usb 2-1: Manufacturer: Generic
+[    0.916891] hub 2-1:1.0: USB hub found
+[    0.918198] hub 2-1:1.0: 2 ports detected
+[    1.024896] usb 1-1: new high-speed USB device number 2 using xhci-mtk
+[    1.030888] usb 3-1: new high-speed USB device number 2 using xhci-mtk
+[    1.084100] mt7921e 0000:01:00.0: WM Firmware Version: ____010000, Build Time: 20241106151045
+[    1.181864] hx83102j spi1.0: hx83102j_sense_off: check False
+[    1.183814] hx83102j spi1.0: hx83102j_sense_off: Safe mode entered
+[    1.187504] hx83102j spi1.0: hx83102j_chip_detect: Detect IC HX83102J successfully
+[    1.187646] hx83102j spi1.0: himax_ts_register_interrupt: irq enabled at: 170
+[    1.187649] hx83102j spi1.0: himax_int_enable: Interrupt disabled
+[    1.362461] Console: switching to colour frame buffer device 240x75
+[    1.380694] mediatek-drm mediatek-drm.18.auto: [drm] fb0: mediatekdrmfb frame buffer device
+[    1.383076] usb 3-1: New USB device found, idVendor=0e8d, idProduct=7961, bcdDevice= 1.00
+[    1.383178] usb 3-1: New USB device strings: Mfr=5, Product=6, SerialNumber=7
+[    1.383235] usb 3-1: Product: Wireless_Device
+[    1.383271] usb 3-1: Manufacturer: MediaTek Inc.
+[    1.383309] usb 3-1: SerialNumber: 000000000
+[    1.385035] usb 3-1: GPIO lookup for consumer reset
+[    1.385041] usb 3-1: using lookup tables for GPIO lookup
+[    1.385046] usb 3-1: No GPIO consumer reset found
+[    1.385569] Bluetooth: btmtk_setup_firmware_79xx() hci0: HW/SW Version: 0x008a008a, Build Time: 20241106151414
+[    1.389228] clk: Disabling unused clocks
+[    1.389672] ALSA device list:
+[    1.389681]   No soundcards found.
+[    1.389763] Waiting for root device /dev/sda2...
+[    1.389815] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    1.389835] cfg80211: failed to load regulatory.db
+[    1.390569] usb 1-1: New USB device found, idVendor=0bda, idProduct=5411, bcdDevice= 1.26
+[    1.390660] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    1.390718] usb 1-1: Product: USB2.1 Hub
+[    1.390752] usb 1-1: Manufacturer: Generic
+[    1.392632] hub 1-1:1.0: USB hub found
+[    1.393593] hub 1-1:1.0: 2 ports detected
+[    1.681898] usb 1-1.2: new high-speed USB device number 3 using xhci-mtk
+[    1.772652] usb 1-1.2: New USB device found, idVendor=214b, idProduct=7250, bcdDevice= 1.00
+[    1.772743] usb 1-1.2: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[    1.772801] usb 1-1.2: Product: USB2.0 HUB
+[    1.774807] hub 1-1.2:1.0: USB hub found
+[    1.775703] hub 1-1.2:1.0: 4 ports detected
+[    2.051890] usb 1-1.2.4: new high-speed USB device number 4 using xhci-mtk
+[    2.209960] usb 1-1.2.4: New USB device found, idVendor=152d, idProduct=0583, bcdDevice=12.14
+[    2.210554] usb 1-1.2.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    2.210614] usb 1-1.2.4: Product: SABRENT
+[    2.210655] usb 1-1.2.4: Manufacturer: JMicron
+[    2.213248] usb 1-1.2.4: SerialNumber: 000000000000A
+[    2.222155] scsi host0: uas
+[    2.229756] scsi 0:0:0:0: Direct-Access     SABRENT                   1214 PQ: 0 ANSI: 6
+[    2.929719] sd 0:0:0:0: [sda] 468862128 512-byte logical blocks: (240 GB/224 GiB)
+[    2.932348] sd 0:0:0:0: [sda] 4096-byte physical blocks
+[    2.935089] sd 0:0:0:0: [sda] Write Protect is off
+[    2.938201] sd 0:0:0:0: [sda] Mode Sense: 5f 00 00 08
+[    2.938578] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    2.939094] sd 0:0:0:0: [sda] Preferred minimum I/O size 4096 bytes
+[    2.939584] sd 0:0:0:0: [sda] Optimal transfer size 33553920 bytes not a multiple of preferred minimum block size (4096 bytes)
+[    2.947501]  sda: sda1 sda2 sda3
+[    2.949586] sd 0:0:0:0: [sda] Attached SCSI disk
+[    3.164862] EXT4-fs (sda2): mounted filesystem with ordered data mode. Quota mode: none.
+[    3.165440] VFS: Mounted root (ext4 filesystem) on device 8:2.
+[    3.173396] devtmpfs: mounted
+[    3.176209] Freeing unused kernel memory: 1664K
+[    3.176793] Run /sbin/init as init process
+[    3.177275]   with arguments:
+[    3.177276]     /sbin/init
+[    3.177278]   with environment:
+[    3.177278]     HOME=/
+[    3.177279]     TERM=linux
+[    3.177280]     kern_guid=ecb2a33b-c1d4-4509-9ba4-b765377ad7d2
+[    3.177281]     earlyprintk=tty1
+[    3.235883] hx83102j spi1.0: himax_initial_work: request file himax_i2chid_1002.bin
+[    3.236394] hx83102j spi1.0: himax_mcu_firmware_update_zf: Updating FW - total FW size = 261120
+[    3.237848] hx83102j spi1.0: hx83102j_sense_off: check False
+[    3.240241] hx83102j spi1.0: hx83102j_sense_off: Safe mode entered
+[    3.246446] hx83102j spi1.0: himax_zf_part_info: main code sz = 108544, config sz = 35500
+[    3.246952] hx83102j spi1.0: himax_sram_write_crc_check: Write FW to SRAM - total write size = 108544
+[    3.338566] hx83102j spi1.0: himax_sram_write_crc_check: HW CRC OK in 0 time
+[    3.339421] hx83102j spi1.0: himax_zf_part_info: Write cfg to SRAM - total write size = 35500
+[    3.377249] hx83102j spi1.0: himax_cable_detect_func: Cable status change: disconnected
+[    3.377747] hx83102j spi1.0: himax_update_fw: TP FW upgrade OK
+[    3.378208] hx83102j spi1.0: himax_initial_work: Update FW success
+[    3.386120] hx83102j spi1.0: hx83102j_sense_on: software reset false
+[    3.437693] hx83102j spi1.0: himax_mcu_power_on_init: waiting for FW reload data
+[    3.441405] hx83102j spi1.0: himax_mcu_power_on_init: wait FW reload 1 times
+[    3.443509] hx83102j spi1.0: himax_mcu_read_FW_status:    DBG_MSG(0x10007F40) = 0x71, 0x00, 0x00, 0x00
+[    3.445590] hx83102j spi1.0: himax_mcu_read_FW_status:  FW_STATUS(0x900000A8) = 0x05, 0x00, 0x00, 0x00
+[    3.447684] hx83102j spi1.0: himax_mcu_read_FW_status:  DD_STATUS(0x900000E8) = 0x04, 0x39, 0x02, 0x08
+[    3.449756] hx83102j spi1.0: himax_mcu_read_FW_status: RESET_FLAG(0x900000E4) = 0x02, 0x00, 0x00, 0x00
+[    3.464430] hx83102j spi1.0: himax_mcu_power_on_init: wait FW reload 2 times
+[    3.466533] hx83102j spi1.0: himax_mcu_read_FW_status:    DBG_MSG(0x10007F40) = 0x71, 0x00, 0x00, 0x00
+[    3.468614] hx83102j spi1.0: himax_mcu_read_FW_status:  FW_STATUS(0x900000A8) = 0x05, 0x00, 0x00, 0x00
+[    3.470702] hx83102j spi1.0: himax_mcu_read_FW_status:  DD_STATUS(0x900000E8) = 0x04, 0x3D, 0x02, 0x08
+[    3.472774] hx83102j spi1.0: himax_mcu_read_FW_status: RESET_FLAG(0x900000E4) = 0x02, 0x00, 0x00, 0x00
+[    3.487456] hx83102j spi1.0: himax_mcu_power_on_init: wait FW reload 3 times
+[    3.489541] hx83102j spi1.0: himax_mcu_read_FW_status:    DBG_MSG(0x10007F40) = 0x14, 0x00, 0x00, 0x00
+[    3.491605] hx83102j spi1.0: himax_mcu_read_FW_status:  FW_STATUS(0x900000A8) = 0x05, 0x00, 0x00, 0x00
+[    3.493669] hx83102j spi1.0: himax_mcu_read_FW_status:  DD_STATUS(0x900000E8) = 0x04, 0x39, 0x02, 0x08
+[    3.495733] hx83102j spi1.0: himax_mcu_read_FW_status: RESET_FLAG(0x900000E4) = 0x02, 0x00, 0x00, 0x00
+[    3.510390] hx83102j spi1.0: himax_mcu_power_on_init: FW reload done
+[    3.522008] hx83102j spi1.0: himax_mcu_tp_info_check: rx_num = 48, tx_num = 32
+[    3.522468] hx83102j spi1.0: himax_mcu_tp_info_check: max_point = 10
+[    3.522903] hx83102j spi1.0: himax_mcu_tp_info_check: interrupt_is_edge = false, stylus_function = true
+[    3.523329] hx83102j spi1.0: himax_mcu_tp_info_check: stylus_v2 = false, stylus_ratio = 1
+[    3.523750] hx83102j spi1.0: himax_mcu_tp_info_check: TOUCH INFO updated
+[    3.525771] hx83102j spi1.0: himax_mcu_read_FW_ver: PANEL_VER: 1D
+[    3.526227] hx83102j spi1.0: himax_mcu_read_FW_ver: FW_VER: C403
+[    3.528239] hx83102j spi1.0: himax_mcu_read_FW_ver: TOUCH_VER: 9
+[    3.528683] hx83102j spi1.0: himax_mcu_read_FW_ver: DISPLAY_VER: 0
+[    3.530688] hx83102j spi1.0: himax_mcu_read_FW_ver: CID_VER: 1A0E
+[    3.532708] hx83102j spi1.0: himax_mcu_read_FW_ver: Cusomer ID : Lenovo
+[    3.534730] hx83102j spi1.0: himax_mcu_read_FW_ver: Project ID : Duet
+[    3.638850] systemd[1]: Failed to find module 'autofs4'
+[    3.731104] systemd[1]: systemd 257.13-1~deb13u1 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +IPE +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK +BTF -XKBCOMMON -UTMP +SYSVINIT +LIBARCHIVE)
+[    3.733447] systemd[1]: Detected architecture arm64.
+[    3.773945] systemd[1]: Hostname set to <debian01>.
+[    3.850311] systemd[1]: bpf-restrict-fs: Failed to load BPF object: No such process
+[    4.195887] hx83102j spi1.0: Update ts->latest_power_status = 1
+[    4.199094] hx83102j spi1.0: himax_cable_detect_func: Cable status change: connected
+[    4.271666] Bluetooth: btusb_mtk_setup() hci0: Device setup in 2818810 usecs
+[    4.274177] Bluetooth: hci_dev_setup_sync() hci0: HCI Enhanced Setup Synchronous Connection command is advertised, but not supported.
+[    4.342477] Bluetooth: aosp_do_open() hci0: AOSP extensions version v1.00
+[    4.345065] Bluetooth: aosp_do_open() hci0: AOSP quality report is supported
+[    4.415141] systemd[1]: Queued start job for default target graphical.target.
+[    4.419565] systemd[1]: Created slice machine.slice - Virtual Machine and Container Slice.
+[    4.422123] systemd[1]: Created slice system-getty.slice - Slice /system/getty.
+[    4.424098] systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+[    4.425859] systemd[1]: Created slice user.slice - User and Session Slice.
+[    4.427238] systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+[    4.428576] systemd[1]: Starting of proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point unsupported.
+[    4.429899] systemd[1]: Expecting device dev-disk-by\x2ddiskseq-12\x2dpart3.device - /dev/disk/by-diskseq/12-part3...
+[    4.431265] systemd[1]: Reached target nss-user-lookup.target - User and Group Name Lookups.
+[    4.440652] systemd[1]: Reached target slices.target - Slice Units.
+[    4.442135] systemd[1]: Reached target snapd.mounts-pre.target - Mounting snaps.
+[    4.443530] systemd[1]: Reached target snapd.mounts.target - Mounted snaps.
+[    4.445002] systemd[1]: Reached target time-set.target - System Time Set.
+[    4.446486] systemd[1]: Reached target virt-guest-shutdown.target - libvirt guests shutdown target.
+[    4.448178] systemd[1]: Listening on dm-event.socket - Device-mapper event daemon FIFOs.
+[    4.449964] systemd[1]: Listening on lvm2-lvmpolld.socket - LVM2 poll daemon socket.
+[    4.459778] systemd[1]: Listening on systemd-coredump.socket - Process Core Dump Socket.
+[    4.471440] systemd[1]: Listening on systemd-creds.socket - Credential Encryption/Decryption.
+[    4.473302] systemd[1]: Listening on systemd-initctl.socket - initctl Compatibility Named Pipe.
+[    4.475161] systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+[    4.477092] systemd[1]: Listening on systemd-journald.socket - Journal Sockets.
+[    4.478779] systemd[1]: systemd-pcrextend.socket - TPM PCR Measurements skipped, unmet condition check ConditionSecurity=measured-uki
+[    4.479542] systemd[1]: systemd-pcrlock.socket - Make TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[    4.480608] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+[    4.482514] systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+[    4.484520] systemd[1]: dev-hugepages.mount - Huge Pages File System skipped, unmet condition check ConditionPathExists=/sys/kernel/mm/hugepages
+[    4.487678] systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+[    4.500320] systemd[1]: Mounting run-lock.mount - Legacy Locks Directory /run/lock...
+[    4.503623] systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+[    4.506954] systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+[    4.510554] systemd[1]: Starting keyboard-setup.service - Set the console keyboard layout...
+[    4.514482] systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+[    4.517997] systemd[1]: Starting lvm2-monitor.service - Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+[    4.522742] systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...
+[    4.532854] systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+[    4.536302] input: hid-hxtp 4858:1002 as /devices/platform/soc/11010000.spi/spi_master/spi1/spi1.0/001C:4858:1002.0002/input/input3
+[    4.537176] systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+[    4.537309] input: hid-hxtp 4858:1002 Stylus as /devices/platform/soc/11010000.spi/spi_master/spi1/spi1.0/001C:4858:1002.0002/input/input4
+[    4.542023] input: hid-hxtp 4858:1002 Stylus as /devices/platform/soc/11010000.spi/spi_master/spi1/spi1.0/001C:4858:1002.0002/input/input5
+[    4.542095] input: hid-hxtp 4858:1002 UNKNOWN as /devices/platform/soc/11010000.spi/spi_master/spi1/spi1.0/001C:4858:1002.0002/input/input6
+[    4.546166] systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+[    4.548182] systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+[    4.549974] hid-multitouch 001C:4858:1002.0002: input,hidraw1: <UNKNOWN> HID v3.00 Device [hid-hxtp 4858:1002] on 
+[    4.550933] hx83102j spi1.0: himax_int_enable: Interrupt enabled
+[    4.555189] systemd[1]: Starting systemd-journald.service - Journal Service...
+[    4.570866] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+[    4.572759] systemd[1]: systemd-pcrmachine.service - TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+[    4.575366] systemd[1]: Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...
+[    4.584682] systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+[    4.593188] systemd[1]: Starting systemd-udev-load-credentials.service - Load udev Rules from Credentials...
+[    4.596413] systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+[    4.601019] systemd[1]: Mounted dev-mqueue.mount - POSIX Message Queue File System.
+[    4.604338] systemd[1]: Mounted run-lock.mount - Legacy Locks Directory /run/lock.
+[    4.606569] systemd[1]: Mounted sys-kernel-debug.mount - Kernel Debug File System.
+[    4.608815] systemd[1]: Mounted sys-kernel-tracing.mount - Kernel Trace File System.
+[    4.610392] systemd-journald[313]: Collecting audit messages is disabled.
+[    4.612257] systemd[1]: Finished kmod-static-nodes.service - Create List of Static Device Nodes.
+[    4.614804] systemd[1]: modprobe@configfs.service: Deactivated successfully.
+[    4.616166] systemd[1]: Finished modprobe@configfs.service - Load Kernel Module configfs.
+[    4.618725] systemd[1]: modprobe@drm.service: Deactivated successfully.
+[    4.620028] systemd[1]: Finished modprobe@drm.service - Load Kernel Module drm.
+[    4.623011] systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+[    4.624248] systemd[1]: Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+[    4.626745] systemd[1]: modprobe@fuse.service: Deactivated successfully.
+[    4.628006] systemd[1]: Finished modprobe@fuse.service - Load Kernel Module fuse.
+[    4.638593] systemd[1]: Finished systemd-modules-load.service - Load Kernel Modules.
+[    4.647045] systemd[1]: Mounting sys-fs-fuse-connections.mount - FUSE Control File System...
+[    4.651668] systemd[1]: Mounting sys-kernel-config.mount - Kernel Configuration File System...
+[    4.657130] systemd[1]: Starting systemd-sysctl.service - Apply Kernel Variables...
+[    4.660658] systemd[1]: Starting systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully...
+[    4.674737] systemd[1]: Mounted sys-fs-fuse-connections.mount - FUSE Control File System.
+[    4.687081] systemd[1]: Mounted sys-kernel-config.mount - Kernel Configuration File System.
+[    4.698301] systemd[1]: Finished systemd-udev-load-credentials.service - Load udev Rules from Credentials.
+[    4.732806] systemd[1]: Started systemd-journald.service - Journal Service.
+[    4.927249] systemd-journald[313]: Received client request to flush runtime journal.
+[    5.667909] hx83102j spi1.0: Update ts->latest_power_status = 1
+[    5.675841] hx83102j spi1.0: himax_cable_detect_func: Cable status change: connected
+[    5.809262] mt7921e 0000:01:00.0 wlp1s0: renamed from wlan0
+[    6.130699] seninf 16010000.seninf-top:csi-receiver@1: seninf_open open_refcnt 1
+[    6.130714] seninf 16010000.seninf-top:csi-receiver@1: seninf_close open_refcnt 0
+[    6.341180] seninf 16010000.seninf-top:csi-receiver@0: seninf_open open_refcnt 1
+[    6.341232] seninf 16010000.seninf-top:csi-receiver@0: seninf_close open_refcnt 0
+[    6.374797] sof-audio-of-mt8186 10b80000.adsp: DT DSP detected
+[    6.374912] sof-audio-of-mt8186 10b80000.adsp: assigned reserved memory node adsp-dma-mem-region
+[    6.422099] sof-audio-of-mt8186 10b80000.adsp: unknown sof_ext_man header type 3 size 0x30
+[    6.422125] sof-audio-of-mt8186 10b80000.adsp: Firmware info: version 2:8:0-50526
+[    6.424921] sof-audio-of-mt8186 10b80000.adsp: Firmware: ABI 3:29:0 Kernel ABI 3:23:0
+[    6.426377] sof-audio-of-mt8186 10b80000.adsp: Firmware info: version 2:8:0-50526
+[    6.426390] sof-audio-of-mt8186 10b80000.adsp: Firmware: ABI 3:29:0 Kernel ABI 3:23:0
+[    6.877681] thermal thermal_zone10: power_allocator: sustainable_power will be estimated
+[    6.877690] thermal thermal_zone8: power_allocator: sustainable_power will be estimated
+[    6.889034] thermal thermal_zone12: power_allocator: sustainable_power will be estimated
+[    6.891016] thermal thermal_zone11: power_allocator: sustainable_power will be estimated
+[    6.895847] thermal thermal_zone9: power_allocator: sustainable_power will be estimated
+[    6.909993] thermal thermal_zone13: power_allocator: sustainable_power will be estimated
+[    7.623975] mtk-apu 19001000.remoteproc: mtk_apu_rv_smc_call: smc call 6
+[    7.861835] sof-audio-of-mt8186 10b80000.adsp: Topology: ABI 3:29:0 Kernel ABI 3:23:0
+[    7.865518] mt8188_mt6359 sound: ASoC: Parent card not yet available, widget card binding deferred
+[    7.866665] tasdev-codec 0-004f: Direct firmware load for tas2563_cal_0x4f.bin failed with error -2
+[    7.866764] tasdev-codec 0-004f: tas2781_load_calibration: Request firmware tas2563_cal_0x4f.bin failed
+[    7.866769] tasdev-codec 0-004f: tasdevice_fw_ready: load tas2563_cal_0x4f.bin error, default will effect
+[    7.866859] tasdev-codec 0-004f: Direct firmware load for tas2563_cal_0x4c.bin failed with error -2
+[    7.866865] tasdev-codec 0-004f: tas2781_load_calibration: Request firmware tas2563_cal_0x4c.bin failed
+[    7.866880] tasdev-codec 0-004f: tasdevice_fw_ready: load tas2563_cal_0x4c.bin error, default will effect
+[    7.882593] mt8188_mt6359 sound: ASoC: driver name too long 'sof-mt8188_tas2563_8326' -> 'sof-mt8188_tas2'
+[    7.920954] input: sof-mt8188_tas2563_8326 DP Jack as /devices/platform/sound/sound/card0/input8
+[    7.924526] input: sof-mt8188_tas2563_8326 Headset Jack as /devices/platform/sound/sound/card0/input9
+[    8.030752] fuse: lxcfs: init connection, mounts: 0:46 (fuse.lxcfs)
+[    8.038921] fuse: fuse_worker: connection initialized, mounts: 0:46 (fuse.lxcfs)
+[   10.011949] Bluetooth: mgmt_init_hdev() MGMT ver 1.22
+[   10.056499] Bluetooth: btmtk_setup_firmware_79xx() hci0: HW/SW Version: 0x008a008a, Build Time: 20241106151414
+[   10.204193] Bluetooth: btusb_mtk_setup() hci0: Device setup in 144688 usecs
+[   10.207385] Bluetooth: hci_dev_setup_sync() hci0: HCI Enhanced Setup Synchronous Connection command is advertised, but not supported.
+[   10.277473] Bluetooth: aosp_do_open() hci0: AOSP extensions version v1.00
+[   10.280757] Bluetooth: aosp_do_open() hci0: AOSP quality report is supported
+[   10.985288] loop0: detected capacity change from 0 to 8
+[   18.785081]  DL2_FE: ASoC: no backend DAIs enabled for DL2_FE, possibly missing ALSA mixer-based routing or UCM profile
+[   19.236583]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   19.236595]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   19.236641]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   19.236644]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   19.236677]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   19.236680]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   19.236712]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   19.236714]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   19.236745]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   19.236747]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   19.236946]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   19.236950]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   19.236990]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   19.236992]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   19.237024]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   19.237027]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   19.237058]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   19.237060]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   19.237090]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   19.237092]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   19.237328]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   19.237332]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   19.237396]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   19.237399]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   19.237451]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   19.237453]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   19.237507]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   19.237510]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   19.237561]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   19.237563]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   19.237861]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   19.237864]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   19.237941]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   19.237943]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   19.238005]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   19.238009]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   19.238076]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   19.238079]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   19.238154]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   19.238157]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   19.238379]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   19.238383]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   19.238426]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   19.238428]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   19.238462]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   19.238465]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   19.238497]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   19.238499]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   19.238529]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   19.238531]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   19.238722]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   19.238726]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   19.238766]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   19.238769]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   19.238800]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   19.238803]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   19.238834]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   19.238836]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   19.238866]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   19.238868]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   19.239084]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   19.239088]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   19.239165]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   19.239168]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   19.239222]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   19.239224]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   19.239278]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   19.239280]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   19.239331]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   19.239333]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   19.239627]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   19.239631]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   19.239707]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   19.239710]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   19.239773]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   19.239775]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   19.239842]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   19.239845]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   19.239909]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   19.239912]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   19.240140]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   19.240144]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   19.240201]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   19.240203]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   19.240247]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   19.240249]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   19.240291]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   19.240293]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   19.240336]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   19.240338]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   19.240535]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   19.240538]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   19.240592]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   19.240594]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   19.240637]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   19.240639]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   19.240680]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   19.240682]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   19.240723]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   19.240726]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   19.240948]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   19.240952]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   19.241026]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   19.241029]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   19.241091]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   19.241093]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   19.241169]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   19.241172]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   19.241242]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   19.241244]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   19.241563]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   19.241568]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   19.241660]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   19.241662]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   19.241734]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   19.241737]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   19.241814]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   19.241816]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   19.241892]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   19.241895]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   19.242141]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   19.242145]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   19.242206]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   19.242209]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   19.242253]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   19.242255]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   19.242298]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   19.242300]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   19.242340]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   19.242342]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   19.242547]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   19.242550]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   19.242604]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   19.242606]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   19.242647]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   19.242649]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   19.242691]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   19.242693]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   19.242733]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   19.242735]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   19.242969]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   19.242974]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   19.243051]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   19.243054]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   19.243115]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   19.243118]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   19.243196]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   19.243199]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   19.243263]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   19.243265]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   19.243582]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   19.243587]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   19.243678]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   19.243680]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   19.243754]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   19.243757]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   19.243836]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   19.243838]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   19.243915]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   19.243918]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   30.677737]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   30.677747]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   30.677794]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   30.677796]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   30.677830]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   30.677832]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   30.677863]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   30.677865]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   30.677896]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   30.677898]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   30.678110]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   30.678114]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   30.678155]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   30.678158]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   30.678189]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   30.678191]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   30.678222]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   30.678224]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   30.678255]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   30.678257]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   30.678503]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   30.678508]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   30.678572]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   30.678575]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   30.678626]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   30.678628]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   30.678682]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   30.678684]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   30.678736]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   30.678739]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   30.679046]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   30.679050]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   30.679127]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   30.679130]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   30.679193]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   30.679195]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   30.679262]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   30.679264]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   30.679330]  AFE_SOF_DL2: afe pm runtime is not active!!
+[   30.679332]  AFE_SOF_DL2: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL2: -22
+[   30.679566]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   30.679570]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   30.679614]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   30.679616]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   30.679648]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   30.679650]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   30.679681]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   30.679683]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   30.679714]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   30.679716]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   30.679908]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   30.679911]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   30.679951]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   30.679953]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   30.679985]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   30.679987]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   30.680018]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   30.680020]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   30.680050]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   30.680052]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   30.680276]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   30.680280]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   30.680342]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   30.680344]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   30.680394]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   30.680396]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   30.680459]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   30.680462]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   30.680514]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   30.680516]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   30.680818]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   30.680822]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   30.680898]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   30.680901]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   30.680962]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   30.680965]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   30.681031]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   30.681033]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   30.681097]  AFE_SOF_DL3: afe pm runtime is not active!!
+[   30.681100]  AFE_SOF_DL3: ASoC: error at snd_soc_link_hw_params on AFE_SOF_DL3: -22
+[   30.681318]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   30.681322]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   30.681377]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   30.681379]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   30.681430]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   30.681433]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   30.681478]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   30.681480]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   30.681522]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   30.681525]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   30.681734]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   30.681737]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   30.681789]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   30.681792]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   30.681833]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   30.681835]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   30.681876]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   30.681878]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   30.681919]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   30.681921]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   30.682159]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   30.682163]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   30.682237]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   30.682240]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   30.682299]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   30.682302]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   30.682364]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   30.682366]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   30.682436]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   30.682439]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   30.682749]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   30.682753]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   30.682842]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   30.682844]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   30.682917]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   30.682919]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   30.682996]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   30.682999]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   30.683074]  AFE_SOF_UL4: afe pm runtime is not active!!
+[   30.683077]  AFE_SOF_UL4: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL4: -22
+[   30.683306]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   30.683309]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   30.683364]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   30.683366]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   30.683417]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   30.683420]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   30.683464]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   30.683467]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   30.683508]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   30.683510]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   30.683710]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   30.683714]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   30.683766]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   30.683769]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   30.683811]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   30.683813]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   30.683854]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   30.683857]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   30.683898]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   30.683900]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   30.684127]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   30.684131]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   30.684204]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   30.684207]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   30.684269]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   30.684271]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   30.684334]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   30.684337]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   30.684399]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   30.684401]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   30.684729]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   30.684733]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   30.684822]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   30.684824]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   30.684898]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   30.684900]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   30.684977]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   30.684980]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   30.685055]  AFE_SOF_UL5: afe pm runtime is not active!!
+[   30.685058]  AFE_SOF_UL5: ASoC: error at snd_soc_link_hw_params on AFE_SOF_UL5: -22
+[   31.316002] fuse: fusermount3: init connection, mounts: 0:55 (fuse.portal)
+[   31.320759] fuse: fuse_worker: connection initialized, mounts: 0:55 (fuse.portal)
+[   31.716539] vaud18: disabling
+[   31.716776] va09: disabling
+[   31.716871] pp3300_mipi_tchscr: disabling
+[   35.545628] warning: `kdeconnectd' uses wireless extensions which will stop working for Wi-Fi 7 hardware; use nl80211
+[   36.285407] wlp1s0: authenticate with 60:1b:52:49:fd:fc
+[   36.455167] wlp1s0: send auth to 60:1b:52:49:fd:fc (try 1/3)
+[   36.459331] wlp1s0: authenticated
+[   36.461625] wlp1s0: associate with 60:1b:52:49:fd:fc (try 1/3)
+[   36.467781] wlp1s0: RX AssocResp from 60:1b:52:49:fd:fc (capab=0x1011 status=0 aid=11)
+[   36.476220] wlp1s0: associated
+[   36.727759] wlp1s0: Limiting TX power to 23 (23 - 0) dBm as advertised by 60:1b:52:49:fd:fc
+[   37.562258] IPv6: ADDRCONF(NETDEV_CHANGE): wlp1s0: link becomes ready
