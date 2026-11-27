@@ -1,0 +1,36 @@
+From 7f4b0d8c2f2c8a9e Mon Sep 17 00:00:00 2001
+From: ChatGPT <noreply@openai.com>
+Subject: [PATCH] PM: genpd: add release callback for genpd device
+
+The generic PM domain embeds a struct device. pm_genpd_init() initializes
+it and genpd_free_data() later calls put_device(). Provide a no-op release
+callback to avoid the driver-core warning when the device is released.
+
+This patch is based on drivers/base/power/domain.c from
+dede94445/geralt-sku6_linux, branch chromeos-r158-v6.1.180.
+
+---
+ drivers/base/power/domain.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/drivers/base/power/domain.c b/drivers/base/power/domain.c
+--- a/drivers/base/power/domain.c
++++ b/drivers/base/power/domain.c
+@@ -26,5 +26,10 @@
+ #include <linux/debugfs.h>
+
+ #include "power.h"
+
++static void genpd_provider_release(struct device *dev)
++{
++	/* nothing to be done here */
++}
++
+ #define GENPD_RETRY_MAX_MS	250		/* Approximate */
+@@ -2122,3 +2127,4 @@ int pm_genpd_init(struct generic_pm_domain *genpd,
+ 	device_initialize(&genpd->dev);
++	genpd->dev.release = genpd_provider_release;
+ 	dev_set_name(&genpd->dev, "%s", genpd->name);
+
+--
+2.43.0

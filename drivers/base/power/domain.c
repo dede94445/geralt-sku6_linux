@@ -25,6 +25,11 @@
 
 #include "power.h"
 
+static void genpd_provider_release(struct device *dev)
+{
+	/* nothing to be done here */
+}
+
 #define GENPD_RETRY_MAX_MS	250		/* Approximate */
 
 #define GENPD_DEV_CALLBACK(genpd, type, callback, dev)		\
@@ -2123,6 +2128,7 @@ int pm_genpd_init(struct generic_pm_domain *genpd,
 		return ret;
 
 	device_initialize(&genpd->dev);
+	genpd->dev.release = genpd_provider_release;
 	dev_set_name(&genpd->dev, "%s", genpd->name);
 
 	mutex_lock(&gpd_list_lock);
