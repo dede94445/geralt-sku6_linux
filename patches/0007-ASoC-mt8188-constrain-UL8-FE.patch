@@ -1,0 +1,30 @@
+From: Kernel patch series <noreply@example.com>
+Subject: [PATCH] ASoC: mediatek: mt8188: constrain UL8 FE to ETDM1_IN
+
+Constrain the UL8 frontend parameters to the capabilities shared with
+its backend. Without merged DPCM constraints, UL8 may expose channel,
+rate and format combinations that cause ETDM1_IN to request an
+unsupported bit-clock rate.
+
+This applies the same merged-constraint policy already used by UL4_FE
+and UL5_FE in this driver.
+
+---
+ sound/soc/mediatek/mt8188/mt8188-mt6359.c | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/sound/soc/mediatek/mt8188/mt8188-mt6359.c b/sound/soc/mediatek/mt8188/mt8188-mt6359.c
+--- a/sound/soc/mediatek/mt8188/mt8188-mt6359.c
++++ b/sound/soc/mediatek/mt8188/mt8188-mt6359.c
+@@ -1040,6 +1040,9 @@ static struct snd_soc_dai_link mt8188_mt6359_dai_links[] = {
+ 		},
+ 		.dynamic = 1,
+ 		.dpcm_capture = 1,
++		.dpcm_merged_chan = 1,
++		.dpcm_merged_rate = 1,
++		.dpcm_merged_format = 1,
+ 		SND_SOC_DAILINK_REG(capture8),
+ 	},
+ 	[DAI_LINK_UL9_FE] = {
+-- 
+2.43.0
