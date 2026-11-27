@@ -1,0 +1,20 @@
+diff --git a/drivers/media/platform/mediatek/isp/isp_7x/camsys/mtk_cam.c b/drivers/media/platform/mediatek/isp/isp_7x/camsys/mtk_cam.c
+--- a/drivers/media/platform/mediatek/isp/isp_7x/camsys/mtk_cam.c
++++ b/drivers/media/platform/mediatek/isp/isp_7x/camsys/mtk_cam.c
+@@ -2050,8 +2050,16 @@ static int isp_composer_handle_ack(struct mtk_cam_device *cam,
+
+ 		if (mtk_cam_is_m2m(ctx)) {
+ 			dev_info(dev, "Unsupport M2M with non-request buffer\n");
++
++			/*
++			 * This path cannot process a non-request buffer
++			 * in M2M mode. Restore the buffer to the using
++			 * list and release its lock before returning.
++			 */
++			list_add(&buf_entry->list_entry,
++				 &ctx->using_buffer_list.list);
++			ctx->using_buffer_list.cnt++;
++			spin_unlock(&ctx->using_buffer_list.lock);
+ 			return -EINVAL;
+ 		}
+ 		goto skip_req;

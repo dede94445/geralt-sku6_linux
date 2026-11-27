@@ -1,0 +1,45 @@
+From: Kernel patch series <noreply@example.com>
+Subject: [PATCH] drm/panfrost: add MediaTek MT8188 Mali-G57 support
+
+diff --git a/drivers/gpu/drm/panfrost/panfrost_drv.c b/drivers/gpu/drm/panfrost/panfrost_drv.c
+--- a/drivers/gpu/drm/panfrost/panfrost_drv.c
++++ b/drivers/gpu/drm/panfrost/panfrost_drv.c
+@@ -684,6 +684,15 @@
+ 	.pm_domain_names = mediatek_mt8186_pm_domains,
+ };
+ 
++static const char * const mediatek_mt8188_supplies[] = { "mali", NULL };
++static const char * const mediatek_mt8188_pm_domains[] = { "core0", "core1", "core2" };
++static const struct panfrost_compatible mediatek_mt8188_data = {
++	.num_supplies = ARRAY_SIZE(mediatek_mt8188_supplies) - 1,
++	.supply_names = mediatek_mt8188_supplies,
++	.num_pm_domains = ARRAY_SIZE(mediatek_mt8188_pm_domains),
++	.pm_domain_names = mediatek_mt8188_pm_domains,
++};
++
+ static const char * const mediatek_mt8192_supplies[] = { "mali", NULL };
+ static const char * const mediatek_mt8192_pm_domains[] = { "core0", "core1", "core2",
+ 							   "core3", "core4" };
+@@ -714,6 +723,7 @@
+ 	{ .compatible = "mediatek,mt8183-mali", .data = &mediatek_mt8183_data },
+ 	{ .compatible = "mediatek,mt8183b-mali", .data = &mediatek_mt8183_b_data },
+ 	{ .compatible = "mediatek,mt8186-mali", .data = &mediatek_mt8186_data },
++	{ .compatible = "mediatek,mt8188-mali", .data = &mediatek_mt8188_data },
+ 	{ .compatible = "mediatek,mt8192-mali", .data = &mediatek_mt8192_data },
+ 	{}
+ };
+diff --git a/drivers/gpu/drm/panfrost/panfrost_gpu.c b/drivers/gpu/drm/panfrost/panfrost_gpu.c
+--- a/drivers/gpu/drm/panfrost/panfrost_gpu.c
++++ b/drivers/gpu/drm/panfrost/panfrost_gpu.c
+@@ -216,6 +216,9 @@
+ 	 */
+ 	GPU_MODEL(g57, 0x9003,
+ 		GPU_REV(g57, 0, 0)),
++	/* MediaTek MT8188 Mali-G57 MC3 */
++	GPU_MODEL(g57, 0x9093,
++		GPU_REV(g57, 0, 0)),
+ };
+ 
+ static void panfrost_gpu_init_features(struct panfrost_device *pfdev)
+-- 
+2.43.0
